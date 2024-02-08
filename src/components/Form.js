@@ -1,5 +1,7 @@
 import React, { useState } from "react";
 import ReactDOM from "react-dom";
+import { Link,useNavigate,useParams } from 'react-router-dom'
+
 import "./Form.css";
 
 function Form() {
@@ -91,12 +93,14 @@ function Form() {
             "College Name": { cName },
             Year: { year },
             "Event Name": { eName },
+           
           },
         ],
       }),
     })
       .then((response) => response.json())
       .then((data) => console.log(data));
+    
   };
 
   return (
@@ -448,8 +452,9 @@ function Form() {
                 {/* when user write in confirm password  input box ,
                     handleConfPasswordChange() function will be called.*/}
               </div>
-
+              
               <div class="links">
+              <Link to='/events' className='btn btn-dark my-3'>Go Back</Link>
                 <button onClick={() => update()}>Submit</button>
               </div>
             </div>
