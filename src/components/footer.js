@@ -7,7 +7,7 @@ function footer() {
       <Container>
         <LinkContainer to="/">
         
-        <div className='text-light bg-dark navbar navbar-expand-lg navbar-dark'>
+        <div className='text-light bg-dark navbar navbar-expand-lg '>
 
         <p>Jay Patel - 9313859293</p>
         <p>Dhanesh Shetty - 8591604650 </p>
