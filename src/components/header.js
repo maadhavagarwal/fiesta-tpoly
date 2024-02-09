@@ -9,7 +9,7 @@ import L1 from './logo1.png'
 function header() {
   return (
     <Navbar className='bg-dark'>
-      <Container  style={{display:'flex',justifyContent:'center',alignSelf:'center'}}>
+      <Container  style={{display:'flex',justifyContent:'centre',alignSelf:'center'}}>
         <LinkContainer to="/">
         
         <Navbar.Brand className='text-light navbar navbar-expand-lg navbar-dark bg-dark '>FIESTA</Navbar.Brand>
