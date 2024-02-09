@@ -57,14 +57,14 @@ function event() {
         >
           About
         </h3>
-        <h5 style={{ textAlign: "center" }}>
+        <a>
           Fiesta is a dynamic celebration uniting business, talent, and
           innovation. Featuring a Business Fair, Mr./Master Fiesta competition,
           Mock Interviews, Shark Tank for entrepreneurs, an exciting Auction,
           and insightful seminars, Fiesta offers a vibrant mosaic of
           opportunities for a memorable experience in talent, innovation, and
           enterprise.
-        </h5>
+        </a>
       </div>
     </div>
   );

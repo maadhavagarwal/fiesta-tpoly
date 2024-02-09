@@ -46,6 +46,15 @@ function Home() {
         </Col>      ))
         }
     </Row>
+    <Row>
+    {sparks.map((sparks)=> {
+      return (
+        <Col key={sparks._id} sm={12} md={6} lg={4} xl={8}>
+          {/* <h2>{course.name}</h2> */}
+          <Sparkscreen sparks={sparks}></Sparkscreen>
+        </Col>      );
+    })}  
+    </Row>
     <Row style={{margin:'0px'}}>
     {autionskills.map((autionskill)=> {
       return (
@@ -55,30 +64,13 @@ function Home() {
         </Col>      );
     })}  
     </Row>
+    
     <Row>
     {mockinterviews.map((mock)=> {
       return (
         <Col key={mock._id} sm={12} md={6} lg={4} xl={8}>
           {/* <h2>{course.name}</h2> */}
           <MockHome mock={mock}></MockHome>
-        </Col>      );
-    })}  
-    </Row>
-    <Row>
-    {masters.map((master)=> {
-      return (
-        <Col key={master._id} sm={12} md={6} lg={4} xl={8}>
-          {/* <h2>{course.name}</h2> */}
-          <Mastermr master={master}></Mastermr>
-        </Col>      );
-    })}  
-    </Row>
-    <Row>
-    {sparks.map((sparks)=> {
-      return (
-        <Col key={sparks._id} sm={12} md={6} lg={4} xl={8}>
-          {/* <h2>{course.name}</h2> */}
-          <Sparkscreen sparks={sparks}></Sparkscreen>
         </Col>      );
     })}  
     </Row>
@@ -91,6 +83,16 @@ function Home() {
         </Col>      );
     })}  
     </Row>
+    <Row>
+    {masters.map((master)=> {
+      return (
+        <Col key={master._id} sm={12} md={6} lg={4} xl={8}>
+          {/* <h2>{course.name}</h2> */}
+          <Mastermr master={master}></Mastermr>
+        </Col>      );
+    })}  
+    </Row>
+   
     <Row>
     {sem1s.map((sem1)=> {
       return (

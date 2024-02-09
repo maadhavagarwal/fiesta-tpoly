@@ -12,22 +12,22 @@ function header() {
       <Container  style={{display:'flex',justifyContent:'center',alignSelf:'center'}}>
         <LinkContainer to="/">
         
-        <Navbar.Brand style={{color: 'white'}}>FIESTA</Navbar.Brand>
+        <Navbar.Brand className='text-light navbar navbar-expand-lg navbar-dark bg-dark '>FIESTA</Navbar.Brand>
         </LinkContainer>
         <LinkContainer to="/events">
             <Nav.Link className='text-light bg-dark' style={{fontweight:'bold'}}>Events</Nav.Link>
             </LinkContainer>
         <Navbar.Toggle aria-controls="basic-navbar-nav" />
         <Navbar.Collapse id="basic-navbar-nav">
-          <Nav class="navbar navbar-expand-lg navbar-dark bg-dark">
+          <Nav class="navbar navbar-expand-lg navbar-dark bg-dark"  >
           
           
           
-            <img src={L1} alt="cur" className="center" style={{height:100,position:'center',margin:0}}></img>
-            <img src={L2} alt="cur" className="center" style={{height:100,position:'center',margin:0}}></img>
-            <img src={L3} alt="cur" className="center" style={{height:100,position:'center',margin:0}}/>
-            <img src={L4} alt="cur" className="center" style={{height:100,position:'center',margin:0}}></img>
-            <img src={Nss} alt='nss'style={{height:90,position:''}}></img>
+            <img src={L1} alt="cur" className="center" style={{height:50,position:'center',margin:0}}></img>
+            <img src={L2} alt="cur" className="center" style={{height:50,position:'center',margin:0}}></img>
+            <img src={L3} alt="cur" className="center" style={{height:50,position:'center',margin:0}}/>
+            <img src={L4} alt="cur" className="center" style={{height:50,position:'center',margin:0}}></img>
+            <img src={Nss} alt='nss'style={{height:40,position:''}}></img>
            
            
             
