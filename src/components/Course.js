@@ -55,7 +55,7 @@ const {id} =useParams()
 
 
      </Row>
-     
+   
      </Container>
 
 

@@ -31,6 +31,7 @@ import Seminar4 from './screen/Seminar'
 import Seminar5 from './screen/Seminar5'
 import Seminar6 from './screen/Seminar6'
 import eluctions from './eluctions'
+import Footer from './footer'
 function Home() {
   return (
     <>
@@ -154,7 +155,6 @@ function Home() {
    
     
 
- 
   
     </>
   )

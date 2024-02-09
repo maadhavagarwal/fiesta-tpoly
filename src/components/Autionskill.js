@@ -4,7 +4,7 @@ import { Link,useNavigate,useParams } from 'react-router-dom'
 import autionskills from './autionskills'
 import ReactDOM from 'react-dom';
 import autionskill from './autionskill.png'
-
+import Footer from './footer'
 
 function AutionSkill (){
 
@@ -57,6 +57,7 @@ function AutionSkill (){
 
 
      </Row>
+     <Footer/>
      
      </Container>
 

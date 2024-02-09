@@ -68,6 +68,7 @@ function event() {
           enterprise.
         </a>
       </div>
+      <Footer/>
     </div>
   );
 }

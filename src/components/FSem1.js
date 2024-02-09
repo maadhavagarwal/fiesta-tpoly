@@ -2,6 +2,7 @@
 import React, {useState} from 'react';
 import ReactDOM from 'react-dom';
 import './Form.css'
+import L1 from './payment.jpeg'
 //  import './App.css';
  
 function App() {
@@ -14,7 +15,7 @@ function App() {
     const [year , setyear] = useState('');
     const [eName, seteName] = useState('');
     //const [Photo,setPhoto]=useState('');
-    
+    const [pHoto,setpHoto]=useState("")
  
     // function to update state of name with 
     // value enter by user in form
@@ -48,6 +49,9 @@ function App() {
       // value enter by user in form
     const handlePasswordChange =(e)=>{
       setPassword(e.target.value);
+    }
+    const handlepHotoChange =(e)=>{
+      setpHoto(e.target.value);
     }
       // function to update state of confirm password 
       // with value enter by user in form
@@ -89,7 +93,8 @@ function App() {
                 'Confrim Password':{confPassword},
                 'College Name':{cName},
                 'Year':{year},
-                'Event Name':{eName}
+                'Event Name':{eName},
+                Photo:{pHoto}
                 
 
               
@@ -407,6 +412,22 @@ function App() {
                 {/* when user write in confirm password  input box ,
                     handleConfPasswordChange() function will be called.*/}
                              </div>
+                             <div>
+              <img src={L1} alt="cur" className="center" style={{height:375,position:'center',margin:0}}/>
+              <label>Payment SS</label>
+            
+                <br />
+                <input
+                  type="file"
+                  value={pHoto}
+                  required
+                  onChange={(e) => {
+                    handlepHotoChange(e);
+                  }}
+                  
+                />
+                <br />
+              </div>
                              <div class="links">
                 <button onClick={() => update()}>Submit</button>
               </div>

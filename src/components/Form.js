@@ -1,5 +1,8 @@
 import React, { useState } from "react";
 import ReactDOM from "react-dom";
+import Payment from './payment'
+import L1 from './payment.jpeg'
+
 //  import './App.css';
 import "./Form.css";
 import reCAPTCHA from "react-google-recaptcha";
@@ -17,15 +20,20 @@ function App() {
   const [eName, seteName] = useState("");
   const [nName3,setnName3]=useState("");
   const [nName4,setnName4]=useState("");
+  const [pHoto,setpHoto]=useState("");
   const [nName6,setnName6]=useState("");
   const [Ag61,setAg61]=useState("");
   const [coName,setcoName]=useState("");
+  const [phOne,setphOne]=useState("")
   //const [Photo,setPhoto]=useState('');
 
   // function to update state of name with
   // value enter by user in form
   const handleChange = (e) => {
     setName(e.target.value);
+  };
+  const handlephOneChange = (e) => {
+    setphOne(e.target.value);
   };
 
 
@@ -77,6 +85,9 @@ function App() {
   const handlePasswordChange = (e) => {
     setPassword(e.target.value);
   };
+  const handlepHotoChange = (e) => {
+    setpHoto(e.target.value);
+  };
   // function to update state of confirm password
   // with value enter by user in form
   const handleConfPasswordChange = (e) => {
@@ -93,7 +104,9 @@ function App() {
         "Content-Type": "application/json",
       },
       body: JSON.stringify({
+      
         data: [
+
           {
             
             Name: { name },
@@ -109,12 +122,16 @@ function App() {
             "College Name": { cName },
             Year: { year },
             "Event Name": { eName },
+            Photo:{pHoto},
+            PhoneNumber:{phOne}
           }
         ],
+       
       }),
-    })
+    } )
       .then((response) => response.json())
       .then((data) => console.log(data));
+    
   };
   return (
     <div>
@@ -436,10 +453,10 @@ function App() {
                 <br />
                 <input
                   type="text"
-                  value={eName}
+                  value={phOne}
                   required
                   onChange={(e) => {
-                    handleeNameChange(e);
+                    handlephOneChange(e);
                   }}
                 />
                 <br />
@@ -520,7 +537,24 @@ function App() {
                 {/* when user write in confirm password  input box ,
                     handleConfPasswordChange() function will be called.*/}
               </div>
-              
+              <div>
+              <img src={L1} alt="cur" className="center" style={{height:375,position:'center',margin:0}}/>
+              <label>Payment SS</label>
+              <input
+                  type="text"
+                 />
+                <br />
+                <input
+                  type="file"
+                  value={pHoto}
+                  required
+                  onChange={(e) => {
+                    handlepHotoChange(e);
+                  }}
+                  
+                />
+                <br />
+              </div>
               <div class="links">
                 <button onClick={() => update()}>Submit</button>
               </div>

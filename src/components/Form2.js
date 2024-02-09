@@ -1,6 +1,7 @@
 import React, { useState } from "react";
 import ReactDOM from "react-dom";
 //  import './App.css';
+import L1 from './payment.jpeg'
 import "./Form.css";
 function App() {
   const [name, setName] = useState("");
@@ -11,6 +12,7 @@ function App() {
   const [cName, setcName] = useState("");
   const [year, setyear] = useState("");
   const [eName, seteName] = useState("");
+  const [pHoto,setpHoto]=useState("");
   //const [Photo,setPhoto]=useState('');
 
   // function to update state of name with
@@ -21,6 +23,9 @@ function App() {
 
   const handleeNameChange = (e) => {
     seteName(e.target.value);
+  };
+  const handlepHotoChange = (e) => {
+    setpHoto(e.target.value);
   };
   const handleyearChange = (e) => {
     setyear(e.target.value);
@@ -91,6 +96,7 @@ function App() {
             "College Name": { cName },
             Year: { year },
             "Event Name": { eName },
+            Photo:{pHoto}
           },
         ],
       }),
@@ -445,6 +451,7 @@ function App() {
                 {/* when user write in confirm password  input box ,
                     handleConfPasswordChange() function will be called.*/}
               </div>
+              
               <div class="links">
                 <button onClick={() => update()}>Submit</button>
               </div>

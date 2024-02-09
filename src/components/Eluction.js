@@ -3,6 +3,7 @@ import{Button, Card, Col, Container, Image, ListGroup, Row} from "react-bootstra
 import { Link,useNavigate,useParams } from 'react-router-dom'
 import eluctions from './eluctions'
 import ReactDOM from 'react-dom';
+import Footer from'./footer'
 
 
 
@@ -56,7 +57,7 @@ const {id} =useParams()
 
 
      </Row>
-     
+   
      </Container>
 
 
