@@ -25,6 +25,8 @@ function event() {
           backgroundImage: `url(${Th})`,
           width: "100%",
           height: "500px",
+          display:'flex',
+          flexDirection:"column"        
         }}
       >
         <h1
