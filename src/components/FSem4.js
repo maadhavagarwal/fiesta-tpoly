@@ -103,7 +103,8 @@ function App() {
 })
   .then((response) => response.json())
   .then((data) => console.log(data));
-
+  alert('A form was submitted with Name :"' + name +
+  '" ,Age :"'+age +'" and Email :"' + email + '"');
     }
     return (
 

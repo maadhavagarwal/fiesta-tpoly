@@ -461,7 +461,7 @@ function App() {
                   }}
                 />
                 <br />
-                <br /><label>Name 2:</label>
+                <label>Name 2:</label>
                 <br />
                 <input
                   type="text"
@@ -473,7 +473,7 @@ function App() {
                 />
                 <br />
                 
-                <br /><label>Name 3:</label>
+                <label>Name 3:</label>
                 <br />
                 <input
                   type="text"
@@ -520,9 +520,7 @@ function App() {
               <div>
               <img src={L1} alt="cur" className="center" style={{height:375,position:'center',margin:0}}/>
               <label>Payment SS</label>
-              <input
-                  type="text"
-                 />
+              
                 <br />
                 <input
                   type="file"

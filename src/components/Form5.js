@@ -126,6 +126,8 @@ function App() {
     })
       .then((response) => response.json())
       .then((data) => console.log(data));
+      alert('A form was submitted with Name :"' + name +
+      '" ,Age :"'+age +'" and Email :"' + email + '"');
   };
   return (
     <div>
@@ -454,7 +456,7 @@ function App() {
                   }}
                 />
                 <br />
-                <br /><label>Name 2:</label>
+                <label>Name 2:</label>
                 <br />
                 <input
                   type="text"
@@ -466,7 +468,7 @@ function App() {
                 />
                 <br />
                 
-                <br /><label>Name 3:</label>
+                <label>Name 3:</label>
                 <br />
                 <input
                   type="text"
@@ -488,7 +490,7 @@ function App() {
                   }}
                 />
                 <br />
-                <br /><label>Name 5:</label>
+                <label>Name 5:</label>
                 <br />
                 <input
                   type="text"
