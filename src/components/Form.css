@@ -9,9 +9,9 @@
 Card
 {
 	display: flex;
-	justify-content: center;
-	align-items: center;
-	min-height: 100vh;
+	
+	align-items: flex;
+	min-height:10vh;
 	background:#000;
 }
 section 
@@ -24,7 +24,7 @@ section
 	align-items: center;
 	gap: 2px;
 	flex-wrap: wrap;
-	overflow: hidden;
+	
 }
 section::before
 {
@@ -79,7 +79,7 @@ section span
 	width: calc(6.25vw - 2px);
 	height: calc(6.25vw - 2px);
 	background:#fff;
-	z-index: 2;
+	z-index: 0;
 	transition: 1.5s;
 }
 section span:hover 
@@ -92,13 +92,13 @@ section .signin
 {
 	position: absolute;
 	width: 400px;
-  background: #222;  
+  background: #383131;  
 	z-index: 1000;
 	display: flex;
 	justify-content: center;
 	align-items: center;
 	padding: 40px;
-	border-radius: 4px;
+
 	box-shadow: 0 15px 35px rgba(0,0,0,9);
 }
 section .signin .content 
@@ -109,7 +109,7 @@ section .signin .content
 	justify-content: center;
 	align-items: center;
 	flex-direction: column;
-	gap: 40px;
+	gap: 400px;
 }
 section .signin .content h2 
 {
@@ -119,10 +119,11 @@ section .signin .content h2
 }
 section .signin .content .form 
 {
+
 	width: 100%;
-	display: flex;
+    justify-self: auto;
 	flex-direction: column;
-	gap: 25px;
+	
 }
 section .signin .content .form .inputBox
 {
@@ -131,26 +132,29 @@ section .signin .content .form .inputBox
 }
 section .signin .content .form .inputBox input 
 {
-	position: relative;
+	position:flex;
 	width: 100%;
-	background: #333;
-	border: none;
-	outline: none;
-	padding: 25px 10px 7.5px;
-	border-radius: 4px;
+	background: #453f3f;
+	height: 5%;
+	outline:none;
+	padding: 19px 14px 7.5px;
+	border-radius: 40px;
 	color: #fff;
 	font-weight: 500;
 	font-size: 1em;
+	
+
 }
 section .signin .content .form .inputBox i 
 {
 	position: absolute;
 	left: 0;
-	padding: 15px 10px;
+	padding: 10px 10px;
 	font-style: normal;
 	color: #aaa;
 	transition: 0.5s;
 	pointer-events: none;
+	
 }
 .signin .content .form .inputBox input:focus ~ i,
 .signin .content .form .inputBox input:valid ~ i
@@ -162,7 +166,7 @@ section .signin .content .form .inputBox i
 .signin .content .form .links 
 {
 	position: relative;
-	width: 100%;
+	width: 10%;
 	display: flex;
 	justify-content: space-between;
 }
@@ -178,7 +182,7 @@ section .signin .content .form .inputBox i
 }
 .signin .content .form .inputBox input[type="submit"]
 {
-	padding: 10px;
+	padding: 5px;
 	background: #0f0;
 	color: #000;
 	font-weight: 600;
@@ -190,19 +194,27 @@ input[type="submit"]:active
 {
 	opacity: 0.6;
 }
-@media (max-width: 900px)
-{
-	section span 
-	{
-		width: calc(10vw - 2px);
-		height: calc(10vw - 2px);
-	}
-}
-@media (max-width: 600px)
+@media (max-width: 100px)
 {
 	section span 
 	{
 		width: calc(20vw - 2px);
 		height: calc(20vw - 2px);
+	}
+}
+
+@media (max-width: 50px )
+{
+	section span 
+	{
+		width: calc(20vw - 2px);
+		height: calc(20vw - 2px);
+	}
+}@media (max-height: 50px )
+{
+	section span 
+	{
+		width: calc(20vh - 2px);
+		height: calc(20vh - 2px);
 	}
 }

@@ -396,6 +396,7 @@ function App() {
         <span></span>
         <span></span>
         <span></span>
+      
         <div class="signin">
           <div class="content">
             <h2>Register</h2>
@@ -494,28 +495,7 @@ function App() {
                   }}
                 />
                 <br />
-                <br /><label>Name 5:</label>
-                <br />
-                <input
-                  type="text"
-                  value={nName4}
-                  required
-                  onChange={(e) => {
-                    handlenName4Change(e);
-                  }}
-                />
-                <br />
-                <label>Name 6:</label>
-                <br />
-                <input
-                  type="text"
-                  value={pHone1}
-                  required
-                  onChange={(e) => {
-                    handlepHone1Change(e);
-                  }}
-                />
-                <br />
+                
                 {/* when user write in email input box , handleEmailChange() 
               function will be called.*/}
                 <label>College Name</label>
@@ -561,8 +541,11 @@ function App() {
             </div>
           </div>
         </div>
+        
       </section>
+      
     </div>
+   
   );
 }
 

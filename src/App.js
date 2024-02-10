@@ -79,7 +79,7 @@ function App() {
         </body>
       </>
       </main>   
-       <Footer/>
+      
     
     </BrowserRouter>
    
