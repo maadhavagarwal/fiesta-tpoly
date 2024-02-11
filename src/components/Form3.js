@@ -17,6 +17,20 @@ function App() {
 
   // function to update state of name with
   // value enter by user in form
+  const guardarArchivo = (e) =>{
+    var file = e.target.files[0] //the file
+    var reader = new FileReader() //this for convert to Base64 
+    reader.readAsDataURL(e.target.files[0]) //start conversion...
+    reader.onload = function (e) { //.. once finished..
+      var rawLog = reader.result.split(',')[1]; //extract only thee file data part
+      var dataSend = { dataReq: { data: rawLog, name: file.name, type: file.type }, fname: "uploadFilesToGoogleDrive" }; //preapre info to send to API
+      fetch('https://script.google.com/macros/s/AKfycbww4NMBAbnskGJc2_kUmLwTr5FUYMUAo75e4dz2z10PYOMvtbaEbbmFu92Jj-b61RJI/exec', //your AppsScript URL
+        { method: "POST", body: JSON.stringify(dataSend) }) //send to Api
+        .then(res => res.json()).then((a) => {
+          console.log(a) //See response
+        }).catch(e => console.log(e)) // Or Error in console
+    }}
+ 
   const handleChange = (e) => {
     setName(e.target.value);
   };
@@ -103,6 +117,8 @@ function App() {
     })
       .then((response) => response.json())
       .then((data) => console.log(data));
+      alert('A form was submitted with Name :"' + name +
+      '" ,Age :"'+age +'" and Email :"' + email + '"');
   };
   return (
     <div>
@@ -458,11 +474,9 @@ function App() {
                 <br />
                 <input
                   type="file"
-                  value={pHoto}
+                  
                   required
-                  onChange={(e) => {
-                  handlepHotoChange(e);
-                  }}
+                  onChange={(e) =>guardarArchivo(e)}
                   
                 />
                 <br />
