@@ -4,7 +4,7 @@ import {LinkContainer} from 'react-router-bootstrap'
 import Nss from './Removal-922.png'
 import L4 from './logo4.png'
 import L3 from './logo3.png'
-import L2 from './logo2.png'
+import L2 from './l4.png'
 import L1 from './logo1.png'
 function header() {
   return (
@@ -22,10 +22,11 @@ function header() {
           <Nav class="navbar navbar-expand-lg navbar-dark bg-dark"  >
           
           
-          
+          <img src={L3} alt="cur" className="center" style={{height:50,position:'center',margin:0}}/>
+          <img src={L2} alt="cur" className="center" style={{height:50,position:'center',margin:0}}></img>
             <img src={L1} alt="cur" className="center" style={{height:50,position:'center',margin:0}}></img>
-            <img src={L2} alt="cur" className="center" style={{height:50,position:'center',margin:0}}></img>
-            <img src={L3} alt="cur" className="center" style={{height:50,position:'center',margin:0}}/>
+           
+            
             <img src={L4} alt="cur" className="center" style={{height:50,position:'center',margin:0}}></img>
             <img src={Nss} alt='nss'style={{height:40,position:''}}></img>
            
