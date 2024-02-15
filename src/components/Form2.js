@@ -85,7 +85,7 @@ function App() {
     reader.onload = function (e) { //.. once finished..
       var rawLog = reader.result.split(',')[1]; //extract only thee file data part
       var dataSend = { dataReq: { data: rawLog, name: file.name, type: file.type }, fname: "uploadFilesToGoogleDrive" }; //preapre info to send to API
-      fetch('https://script.google.com/macros/s/AKfycbww4NMBAbnskGJc2_kUmLwTr5FUYMUAo75e4dz2z10PYOMvtbaEbbmFu92Jj-b61RJI/exec', //your AppsScript URL
+      fetch('https://script.google.com/macros/s/AKfycbyaMBG2hFR9Q15yq29hsK7dzBdEW_yhwB1kqam36K4oHiFes-rs0OmGrJ8VGzTJES9b/exec', //your AppsScript URL
         { method: "POST", body: JSON.stringify(dataSend) }) //send to Api
         .then(res => res.json()).then((a) => {
           console.log(a) //See response
@@ -467,7 +467,20 @@ function App() {
                 {/* when user write in confirm password  input box ,
                     handleConfPasswordChange() function will be called.*/}
               </div>
+              <div>
+              <img src={L1} alt="cur" className="center" style={{height:375,position:'center',margin:0}}/>
+              <label>Payment SS</label>
               
+                <br />
+                <input
+                  type="file"
+                  
+                  required
+                  onChange={(e) =>  guardarArchivo(e)}
+                  
+                />
+                <br />
+              </div>
               <div class="links">
                 <button onClick={() => update()}>Submit</button>
               </div>

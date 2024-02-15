@@ -36,6 +36,20 @@ const {id} =useParams()
        <ListGroup.Item>
         <h3>{eluction.description}</h3>
        </ListGroup.Item>
+       <ol>
+       	Rules and regulations
+
+<ol>•	Participants must arrive at the location 30 minutes before the start of the competition. </ol>
+<ol>•	The topic will be given to you before the competition begins.</ol>
+<ol>•	Elocution will be based on self-composed content.</ol>
+<ol>•	 The language for the elocution will be English. </ol>
+<ol>•	Each participant will be allotted 5 minutes only, 3 minutes for speaking and 2 minutes for Q&A.</ol> 
+<ol>•	Judging criteria will depend on presentation, introduction, depth of the topic, creativity, and grasp of language.</ol> 
+<ol>•	Your speech shouldn’t deviate from the topic. </ol>
+<ol>•	The judges' decision will be final. </ol>
+<ol>•	Any external media (e.g., PowerPoint, poster, etc.) is not allowed."</ol>
+
+       </ol>
       </ListGroup>
       </Col>
      <Col md={3}>
