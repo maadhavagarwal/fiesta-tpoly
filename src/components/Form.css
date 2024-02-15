@@ -32,25 +32,11 @@ section::before
     position: absolute;
     width: 100%;
     height: 100%;
-    background: linear-gradient(#000,rgb(145, 216, 32),#000);
+    background: linear-gradient(#765be4,#e88181,#88e691);
     animation:animation 1ms linear infinite;
 }
-@keyframes animation {
 
-    0%{
-        transform: translate(-0%);
-    }
-    100%{
-        transform: translateY(0%);
-    }
-    100%{
-        transform:translate(0%);
-    }
-	0%{
-        transform: translate(0%);
-    }
-  
-}
+
 /*
 section::before 
 {
@@ -72,21 +58,7 @@ section::before
 		transform: translateY(100%);
 	}
 }*/
-section span 
-{
-	position: relative;
-	display: block;
-	width: calc(6.25vw - 2px);
-	height: calc(6.25vw - 2px);
-	background-image:src/components/FBG.png;
-	
-	transition: 1.5s;
-}
-section span:hover 
-{
-	background: #0f0;
-	transition: 0s;
-}
+
 
 section .signin
 {

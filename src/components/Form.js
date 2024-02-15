@@ -500,7 +500,7 @@ function App() {
                   }}
                 />
                 <br />
-                <label>Name 4:</label>
+                <label>Business description</label>
                 <br />
                 <input
                   type="text"
@@ -534,7 +534,7 @@ function App() {
                     handleConfPasswordChange() function will be called.*/}
               </div>
               <div>
-              <img src={L1} alt="cur" className="center" style={{height:375,position:'center',margin:0}}/>
+              <img src={L1} alt="cur" className="center" style={{height:330,width:"100%",position:'center',margin:0}}/>
               <label>Payment SS</label>
               
                 <br />
