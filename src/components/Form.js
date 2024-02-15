@@ -525,6 +525,16 @@ function App() {
                   }}
                 />
                 <br />
+                <label>Transaction Id</label>
+                <br />
+                <input
+                  type="text"
+                  value={cName}
+                  required
+                  onChange={(e) => {
+                    handlecNameChange(e);
+                  }}
+                />
                 
 
                 {/* when user write in password input box ,

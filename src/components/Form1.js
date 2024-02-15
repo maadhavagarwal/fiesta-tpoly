@@ -11,7 +11,9 @@ function Form() {
   const [cName, setcName] = useState("");
   const [year, setyear] = useState("");
   const [eName, seteName] = useState("");
-  const [pHoto,setpHoto]=useState("")
+  const [pHoto,setpHoto]=useState("");
+  const [pAy,setpAy]=useState("");
+  
   //const [Photo,setPhoto]=useState('');
 
   // function to update state of name with
@@ -22,6 +24,9 @@ function Form() {
 
   const handleeNameChange = (e) => {
     seteName(e.target.value);
+  };
+  const handlepAyChange = (e) => {
+    setpAy(e.target.value);
   };
   const handleyearChange = (e) => {
     setyear(e.target.value);
@@ -92,7 +97,7 @@ function Form() {
     }}
  
   const update = () => {
-    fetch("'https://sheetdb.io/api/v1/f830d5jvfa5r9'", {
+    fetch("https://sheetdb.io/api/v1/b8a6v109rt4ju", {
       method: "POST",
       headers: {
         Accept: "application/json",
@@ -109,6 +114,7 @@ function Form() {
             "College Name": { cName },
             Year: { year },
             "Event Name": { eName },
+            Transtion:{pAy,}
             
           },
         ],
@@ -459,6 +465,17 @@ function Form() {
                   required
                   onChange={(e) => {
                     handleeNameChange(e);
+                  }}
+                />
+                <br />
+                <label>Transaction id</label>
+                <br />
+                <input
+                  type="text"
+                  value={pAy}
+                  required
+                  onChange={(e) => {
+                    handlepAyChange(e);
                   }}
                 />
                 <br />

@@ -23,7 +23,8 @@ function App() {
   const [Ag61,setAg61]=useState("");
   const [coName,setcoName]=useState("");
   const [pHoto,setpHoto]=useState("");
-  const [phOne,setphOne]=useState("")
+  const [phOne,setphOne]=useState("");
+  const [pAy,setpAy]=useState("")
   //const [Photo,setPhoto]=useState('');
 
   // function to update state of name with
@@ -81,6 +82,9 @@ function App() {
   const handlePasswordChange = (e) => {
     setPassword(e.target.value);
   };
+  const handlepAyChange = (e) => {
+    setpAy(e.target.value);
+  };
   const handlephOneChange = (e) => {
     setphOne(e.target.value);
   };
@@ -132,8 +136,8 @@ function App() {
             "College Name": { cName },
             Year: { year },
             "Event Name": { eName },
-            
-            PhoneNumber:{phOne}
+            PhoneNumber:{phOne},
+            Transtion:{pAy},
           }
         ],
       }),
@@ -536,6 +540,17 @@ function App() {
                   required
                   onChange={(e) => {
                     handlecNameChange(e);
+                  }}
+                />
+                <br />
+                <label>Transaction id</label>
+                <br />
+                <input
+                  type="text"
+                  value={pAy}
+                  required
+                  onChange={(e) => {
+                    handlepAyChange(e);
                   }}
                 />
                 <br />

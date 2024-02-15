@@ -12,7 +12,8 @@ function App() {
   const [cName, setcName] = useState("");
   const [year, setyear] = useState("");
   const [eName, seteName] = useState("");
-  const [pHoto,setpHoto]=useState("")
+  const [pHoto,setpHoto]=useState("");
+  const [pAy,setpAy]=useState("");
   //const [Photo,setPhoto]=useState('');
 
   // function to update state of name with
@@ -65,6 +66,9 @@ function App() {
   const handlePasswordChange = (e) => {
     setPassword(e.target.value);
   };
+  const handlepAyChange = (e) => {
+    setpAy(e.target.value);
+  };
   // function to update state of confirm password
   // with value enter by user in form
   const handleConfPasswordChange = (e) => {
@@ -93,7 +97,7 @@ function App() {
     e.preventDefault();
   };
   const update = () => {
-    fetch("https://sheetdb.io/api/v1/q7sttvrsp0vna", {
+    fetch("https://sheetdb.io/api/v1/ziepb6hbktcxh", {
       method: "POST",
       headers: {
         Accept: "application/json",
@@ -110,7 +114,8 @@ function App() {
             "College Name": { cName },
             Year: { year },
             "Event Name": { eName },
-            Photo:{pHoto}
+            Photo:{pHoto},
+            Transtion:{pAy},
           },
         ],
       }),
@@ -457,6 +462,17 @@ function App() {
                   required
                   onChange={(e) => {
                     handleeNameChange(e);
+                  }}
+                />
+                <br />
+                <label>Transaction id</label>
+                <br />
+                <input
+                  type="text"
+                  value={pAy}
+                  required
+                  onChange={(e) => {
+                    handlepAyChange(e);
                   }}
                 />
                 <br />

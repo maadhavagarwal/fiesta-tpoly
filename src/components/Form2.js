@@ -13,12 +13,16 @@ function App() {
   const [year, setyear] = useState("");
   const [eName, seteName] = useState("");
   const [pHoto,setpHoto]=useState("");
+  const [pAy,setpAy]=useState("");
   //const [Photo,setPhoto]=useState('');
 
   // function to update state of name with
   // value enter by user in form
   const handleChange = (e) => {
     setName(e.target.value);
+  };
+  const handlepAyChange = (e) => {
+    setpAy(e.target.value);
   };
 
   const handleeNameChange = (e) => {
@@ -93,7 +97,7 @@ function App() {
     }}
  
   const update = () => {
-    fetch("https://sheetdb.io/api/v1/ai1d0u4a3qci1", {
+    fetch("https://sheetdb.io/api/v1/570sn2794qdwo", {
       method: "POST",
       headers: {
         Accept: "application/json",
@@ -110,6 +114,7 @@ function App() {
             "College Name": { cName },
             Year: { year },
             "Event Name": { eName },
+            Transtion:{pAy}
                       
           },
         ],
@@ -460,6 +465,18 @@ function App() {
                   }}
                 />
                 <br />
+                <label>Transaction id</label>
+                <br />
+                <input
+                  type="text"
+                  value={pAy}
+                  required
+                  onChange={(e) => {
+                    handlepAyChange(e);
+                  }}
+                />
+                <br />
+
 
                 {/* when user write in password input box ,
                   handlePasswordChange() function will be called.*/}
