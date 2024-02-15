@@ -78,7 +78,7 @@ section span
 	display: block;
 	width: calc(6.25vw - 2px);
 	height: calc(6.25vw - 2px);
-	background:#fafafa;
+	background-image:src/components/FBG.png;
 	
 	transition: 1.5s;
 }

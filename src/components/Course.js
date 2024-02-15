@@ -34,6 +34,81 @@ const {id} =useParams()
        <ListGroup.Item>
         <h3>{course.description}</h3>
        </ListGroup.Item>
+       <ol>
+       <ol>
+        
+
+	Rules:
+</ol>
+<ol>
+1.	Do not litter and maintain the decorum of the event.
+</ol>
+<ol>
+2.	Chairs won’t be provided; you need to bring your own chairs.
+</ol>
+<ol>
+3.	Tables will be arranged for you.
+</ol>
+<ol>
+4.	It is compulsory to wear your college ID card.
+</ol>
+<ol>
+5.	There are three criteria for judging:
+</ol>
+<ol>
+a.	Presentation
+</ol>
+<ol>
+b.	Cleanliness 
+</ol>
+<ol>
+c.	Execution 
+</ol>
+<ol>
+d.	A Mystery Criteria  
+</ol>
+<ol>
+
+6.	Themes:
+</ol>
+<ol>
+a.	Service – Clothing items, materials, etc.
+</ol>
+<ol>
+b.	Games
+</ol>
+<ol>
+c.	Food 
+</ol>
+<ol>
+7.	Only 3 participants are allowed per team.
+</ol>
+<ol>
+8.	Electricity and water will be provided.
+</ol>
+<ol>
+9.	You are allowed to keep only two payment modes – UPI and Cash.
+</ol>
+<ol>
+10.	 It is mandatory to send a WhatsApp message to +91 9313859293 (Jay Patel) regarding your theme, items used, etc.
+For example, if you’re choosing Food, you should mention what you will be selling, the items used, etc.
+</ol>
+<ol>
+11.	 Prizes:
+</ol>
+<ol>
+1st winner - ₹1000 cash + Certificate + Momento
+</ol>
+<ol>
+2nd winner - ₹500 cash + Certificate + Momento
+</ol>
+<ol>
+3rd winner - Certificate + Momento
+</ol>
+
+
+
+       </ol>
       </ListGroup>
       </Col>
      <Col md={3}>

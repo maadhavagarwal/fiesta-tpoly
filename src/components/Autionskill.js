@@ -36,7 +36,38 @@ function AutionSkill (){
        <ListGroup.Item>
         <h3>{autionskill.description}</h3>
        </ListGroup.Item>
-       <h3>Hiiiiiiiiiiiiiiiiiiiiiiii</h3>
+     <ol>
+Rules and Regulations
+     </ol>
+<ol>
+•	 Each participant will have five minutes to present.
+<ol>
+•	The presentations should not exceed four slides.
+</ol>
+<ol>
+•	 The final slide should include the display side for the auction and base price. 
+</ol>
+<ol>
+•	Judging critera will be depend on the vocabulary, knowledge , presentation skills and grasp of language.
+</ol>
+<ol>
+•	The first prize winner of the auction skills competition will receive a prestigious momento along with cash price of 1000\- and a certificate.
+</ol>
+<ol>
+•	The second prize winner of the auction skills competition will receive a prestigious momento along with cash price of 500\- and a certificate.
+
+</ol>
+<ol>
+  •	The third prize winner of the auction skills competition will receive a prestigious momento and a certificate.
+  </ol>
+<ol>
+  •	Judge decision will be the final decision.
+   </ol>
+<ol>
+  •	Maintaining the decorum is a must.
+  </ol>
+
+     </ol>
       </ListGroup>
       </Col>
      <Col md={3}>

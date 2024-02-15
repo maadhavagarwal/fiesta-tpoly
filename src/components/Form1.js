@@ -385,7 +385,7 @@ function Form() {
         <span></span>
         <div class="signin">
           <div class="content">
-            <h2>Sign In</h2>
+            <h2>Registor</h2>
             <div class="form">
               <div class="inputBox">
                 <label>Name:</label>
