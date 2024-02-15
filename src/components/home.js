@@ -66,15 +66,7 @@ function Home() {
     })}  
     </Row>
     
-    <Row>
-    {mockinterviews.map((mock)=> {
-      return (
-        <Col key={mock._id} sm={12} md={6} lg={4} xl={8}>
-          {/* <h2>{course.name}</h2> */}
-          <MockHome mock={mock}></MockHome>
-        </Col>      );
-    })}  
-    </Row>
+    
     <Row>
     {eluctions.map((eluction)=> {
       return (
@@ -94,61 +86,6 @@ function Home() {
     })}  
     </Row>
    
-    <Row>
-    {sem1s.map((sem1)=> {
-      return (
-        <Col key={sem1._id} sm={12} md={6} lg={4} xl={8}>
-          {/* <h2>{course.name}</h2> */}
-          <Seminar sem1s={sem1}></Seminar>
-        </Col>      );
-    })}  
-    </Row>
-    <Row>
-    {sem2s.map((sem2)=> {
-      return (
-        <Col key={sem2._id} sm={12} md={6} lg={4} xl={8}>
-          {/* <h2>{course.name}</h2> */}
-          <Seminar2 sem2s={sem2}></Seminar2>
-        </Col>      );
-    })}  
-    </Row>
-    <Row>
-    {sem3s.map((sem3)=> {
-      return (
-        <Col key={sem3._id} sm={12} md={6} lg={4} xl={8}>
-          {/* <h2>{course.name}</h2> */}
-          <Seminar3 sem3s={sem3}></Seminar3>
-        </Col>      );
-    })}  
-    </Row>
-    
-    <Row>
-    {sems.map((sem)=> {
-      return (
-        <Col key={sem._id} sm={12} md={6} lg={4} xl={8}>
-          {/* <h2>{course.name}</h2> */}
-          <Seminar4 sems={sem}></Seminar4>
-        </Col>      );
-    })}  
-    </Row>
-    <Row>
-    {sem5s.map((sem5)=> {
-      return (
-        <Col key={sem5._id} sm={12} md={6} lg={4} xl={8}>
-          {/* <h2>{course.name}</h2> */}
-          <Seminar5 sem5s={sem5}></Seminar5>
-        </Col>      );
-    })}  
-    </Row>
-    <Row>
-    {sem6s.map((sem6)=> {
-      return (
-        <Col key={sem6._id} sm={12} md={6} lg={4} xl={8}>
-          {/* <h2>{course.name}</h2> */}
-          <Seminar6 sem6s={sem6}></Seminar6>
-        </Col>      );
-    })}  
-    </Row>
     </Row>
     
   <Footer/>
