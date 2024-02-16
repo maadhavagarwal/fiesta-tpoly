@@ -550,13 +550,14 @@ function App() {
                 
                   <label>Transaction Id</label>
                   <input
-                    required
+                    
                     type="text"
                     value={pAy}
                     onChange={(e) => {
-                      handlecNameChange(e);
+                    handlecNameChange(e);
                    
                     }}
+                    required
                     />
                     <br />
                 
