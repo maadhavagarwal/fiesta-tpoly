@@ -10,7 +10,7 @@ function footer() {
         
         <div className= 'navbar-expand navbar-dark bg-dark text-light'>
 
-        <p>Jay Patel - <a href="callto:9313859293" style={{color:'white',textDecoration:'none'}}>+919313859293</a></p>
+        <p>Jay Patel - <a href="callto:+919313859293" style={{color:'white',textDecoration:'none'}}>+919313859293</a></p>
         <p>Dhanesh Shetty - 8591604650 </p>
         <p>Avaneesh Gawde - 9820874701 </p>
         <p>Hrishikesh Thakrar - 7020991887</p>
