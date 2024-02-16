@@ -14,7 +14,7 @@ function footer() {
         <p>Dhanesh Shetty - 8591604650 </p>
         <p>Avaneesh Gawde - 9820874701 </p>
         <p>Hrishikesh Thakrar - 7020991887</p>
-        <p>Email : iic@tpoly.in</p>
+        <a href='https://mail.google.com/mail/u/0/#inbox?compose=new'>Email : iic@tpoly.in</a>
         </div> 
         </LinkContainer>
         <Navbar.Toggle aria-controls="basic-navbar-nav" />
