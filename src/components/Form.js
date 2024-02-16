@@ -139,8 +139,8 @@ function App() {
             Email: { email },
             Age: { age },
             Password: { password },
-            Phone:{pHone},
-            Phone1:{pHone1},
+           
+            Phone1:{pHone},
             "Confrim Password": { confPassword },
             "College Name": { cName },
             Year: { year },
@@ -482,7 +482,7 @@ function App() {
                 <br />
                 <input
                   type="text"
-                  value={phOne}
+                  value={confPassword}
                   required
                   onChange={(e) => {
                     handlephOneChange(e);
@@ -540,12 +540,15 @@ function App() {
                 <label>Transaction Id</label>
                 <br />
                 <input
+                   
                   type="text"
+                  
                   value={pAy}
-                  required
+                  
                   onChange={(e) => {
                     handlepAyChange(e);
                   }}
+                  
                 />
                 
 
