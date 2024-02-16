@@ -1,12 +1,9 @@
 import React, { useState } from "react";
-import { Link, useNavigate } from "react-router-dom";
+import { Link } from "react-router-dom";
 import ReactDOM from "react-dom";
 import "./Form.css";
 import L1 from './payment.jpeg'
-import { Button } from "react-bootstrap";
-import { Form } from "react-bootstrap";
 function Form() {
-    const navigate = useNavigate();
   const [name, setName] = useState("");
   const [age, setAge] = useState("");
   const [email, setEmail] = useState("");
@@ -66,26 +63,26 @@ function Form() {
   };
   // below function will be called when user
   // click on submit button .
-  // const handleSubmit = (e) => {
-  //   if (password != confPassword) {
-  //     // if 'password' and 'confirm password'
-  //     // does not match.
-  //     alert("password Not Match");
-  //   } else {
-  //     // display alert box with user
-  //     // 'name' and 'email' details .
-  //     alert(
-  //       'A form was submitted with Name :"' +
-  //         name +
-  //         '" ,Age :"' +
-  //         age +
-  //         '" and Email :"' +
-  //         email +
-  //         '"'
-  //     );
-  //   }
-  //   e.preventDefault();
-  // };
+  const handleSubmit = (e) => {
+    if (password != confPassword) {
+      // if 'password' and 'confirm password'
+      // does not match.
+      alert("password Not Match");
+    } else {
+      // display alert box with user
+      // 'name' and 'email' details .
+      alert(
+        'A form was submitted with Name :"' +
+          name +
+          '" ,Age :"' +
+          age +
+          '" and Email :"' +
+          email +
+          '"'
+      );
+    }
+    e.preventDefault();
+  };
   const guardarArchivo = (e) =>{
     var file = e.target.files[0] //the file
     var reader = new FileReader() //this for convert to Base64 
@@ -128,22 +125,6 @@ function Form() {
       .then((data) => console.log(data));
       alert('A form was submitted with Name :"' + name +
       '" ,Age :"'+age +'" and Email :"' + email + '"');
-  };
-  
-  const [validated, setValidated] = useState(false);
-
-  const handleSubmit = async (event) => {
-    const form = event.currentTarget;
-    if (form.checkValidity() === false) {
-      event.preventDefault();
-      event.stopPropagation();
-    }
-    if(pAy === ""){
-      setValidated(true);
-    }else{ 
-      update();
-      navigate("/events");
-    }
   };
 
   return (
@@ -411,46 +392,45 @@ function Form() {
         <span></span>
         <div class="signin">
           <div class="content">
-            <h2>Register</h2>
-            <Form noValidate validated={validated} onSubmit={handleSubmit}>
-                <div class="form">
-                <div class="inputBox">
-                    <label>Name:</label>
-                    <br />
-                    <input
-                    type="text"
-                    value={name}
-                    required
-                    onChange={(e) => {
-                        handleChange(e);
-                    }}
-                    />
-                    <br />
+            <h2>Registor</h2>
+            <div class="form">
+              <div class="inputBox">
+                <label>Name:</label>
+                <br />
+                <input
+                  type="text"
+                  value={name}
+                  required
+                  onChange={(e) => {
+                    handleChange(e);
+                  }}
+                />
+                <br />
 
-                    <label>Age:</label>
-                    <br />
-                    <input
-                    type="text"
-                    value={age}
-                    required
-                    onChange={(e) => {
-                        handleAgeChange(e);
-                    }}
-                    />
-                    <br />
+                <label>Age:</label>
+                <br />
+                <input
+                  type="text"
+                  value={age}
+                  required
+                  onChange={(e) => {
+                    handleAgeChange(e);
+                  }}
+                />
+                <br />
                 {/*when user write in age input box , handleAgeChange()
-                function will be called. */}
-                    <label>Email:</label>
-                    <br />
-                    <input
-                    type="email"
-                    value={email}
-                    required
-                    onChange={(e) => {
-                        handleEmailChange(e);
-                    }}
-                    />
-                    <br />
+               function will be called. */}
+                <label>Email:</label>
+                <br />
+                <input
+                  type="email"
+                  value={email}
+                  required
+                  onChange={(e) => {
+                    handleEmailChange(e);
+                  }}
+                />
+                <br />
                 {/* when user write in email input box , handleEmailChange() 
               function will be called.*/}
              
@@ -465,7 +445,7 @@ function Form() {
                   onChange={(e) => {
                     handlecNameChange(e);
                   }}
-                  />
+                />
                 <br />
                 <label>Year</label>
                 <br />
@@ -476,7 +456,7 @@ function Form() {
                   onChange={(e) => {
                     handleyearChange(e);
                   }}
-                  />
+                />
                 <br />
                 <label>College Name</label>
                 <br />
@@ -487,18 +467,19 @@ function Form() {
                   onChange={(e) => {
                     handleeNameChange(e);
                   }}
-                  />
+                />
                 <br />
-                <Form.Group md="4" controlId="validationCustom01">
-                  <Form.Label>Transaction Id</Form.Label>
-                  <Form.Control
-                    required
-                    value={pAy}
-                    onChange={(e)=>setpAy(e.target.value)}
-                    type="text"
-                    />
-                  <Form.Control.Feedback type="invalid">Transaction Id Required !</Form.Control.Feedback>
-                </Form.Group>
+                <label>Transaction id</label>
+                <br />
+                <input
+                  type="text"
+                  value={pAy}
+                  required
+                  onChange={(e) => {
+                    handlepAyChange(e);
+                  }}
+                />
+                <br />
 
                 {/* when user write in password input box ,
                   handlePasswordChange() function will be called.*/}
@@ -511,30 +492,24 @@ function Form() {
               <label>Payment SS</label>
               <input
                   type="text"
-                  />
+                 />
                 <br />
                 <input
                   type="file"
                   value={pHoto}
                   required
                   onChange={(e) => guardarArchivo(e)
-                    
+                   
                   }
                   
-                  />
+                />
                 <br />
               </div>
               <div class="links">
-                  <Button
-                  type="submit"
-                  className="btn btn-light my-3 text-dark"
-                  onClick={handleSubmit}>
-                    Submit
-                  </Button>
+              <Link to='/events' className='btn btn-light my-3 text-dark' onClick={() => update() } >Submit</Link>
      
               </div>
             </div>
-                    </Form>
           </div>
         </div>
       </section>
