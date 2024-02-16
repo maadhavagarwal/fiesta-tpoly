@@ -32,7 +32,7 @@ import Sem1 from './components/Sem1';
 import sem1s from './components/sem1s'
 import Sem2 from './components/Sem2';
 import sem2s from './components/sem2s'
-
+ 
 import Sem3 from './components/Sem3';
 import Sem from './components/Sem';
 import Sem5 from './components/Sem5';
