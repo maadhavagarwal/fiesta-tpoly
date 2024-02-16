@@ -15,7 +15,7 @@ function App() {
   const [age, setAge] = useState("");
   const [email, setEmail] = useState("");
   const [password, setPassword] = useState("");
-  const [confPassword, setConfPassword] = useState("");
+  const [confPassword, setconfPassword] = useState("");
   const [cName, setcName] = useState("");
   const [year, setyear] = useState("");
   const [eName, seteName] = useState("");
@@ -104,6 +104,9 @@ function App() {
   const handlePasswordChange = (e) => {
     setPassword(e.target.value);
   };
+  const handleconfPasswordChange = (e) => {
+    setconfPassword(e.target.value);
+  };
   const handlepAyChange = (e) => {
     setpAy(e.target.value);
   };
@@ -141,7 +144,7 @@ function App() {
             Password: { password },
            
             Phone1:{pHone},
-            phonenum: { confPassword },
+            "Confrim Password": { confPassword },
             "College Name": { cName },
             Year: { year },
             "Event Name": { eName },
@@ -485,7 +488,7 @@ function App() {
                   value={confPassword}
                   required
                   onChange={(e) => {
-                    handlephOneChange(e);
+                    handleconfPasswordChange(e);
                   }}
                 />
                 <br />
