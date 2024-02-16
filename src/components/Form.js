@@ -118,12 +118,14 @@ function App() {
   
 
   const update = () => {
-    fetch("https://sheetdb.io/api/v1/9c1y64gy3nu3r", {
+    fetch("https://sheetdb.io/api/v1/9c1y64gy3nu3r", 
+    {
       method: "POST",
       headers: {
         Accept: "application/json",
         "Content-Type": "application/json",
       },
+      
       body: JSON.stringify({
       
         data: [
@@ -155,7 +157,7 @@ function App() {
       //.then((data)=><Link to="/"></Link>)
       alert('A form was submitted with Name :"' + name +
       '" ,Age :"'+age +'" and Email :"' + email + '"');
-      <Link TO="/">onClick</Link>
+      
       
   };
   return (
@@ -567,9 +569,13 @@ function App() {
                 />
                 <br />
               </div>
+              <Form>
               <div class="links">
-                <button onClick={() => update() }>Submit</button>
+                
+                <Link to='/events' className='btn btn-light my-3' onClick={() => update() } >Submit</Link>
+     
               </div>
+              </Form>
             </div>
           </div>
            

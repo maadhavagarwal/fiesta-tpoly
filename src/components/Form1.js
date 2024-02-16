@@ -1,4 +1,5 @@
 import React, { useState } from "react";
+import { Link } from "react-router-dom";
 import ReactDOM from "react-dom";
 import "./Form.css";
 import L1 from './payment.jpeg'
@@ -506,6 +507,8 @@ function Form() {
               </div>
               <div class="links">
                 <button onClick={() => update()}>Submit</button>
+                <Link to='/' className='btn' onClick={() => update()}>Go Back</Link>
+     
               </div>
             </div>
           </div>
