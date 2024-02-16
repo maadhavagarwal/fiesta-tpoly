@@ -461,8 +461,7 @@ function App() {
                     }}
                   />
                   <br />
-                 
-                  
+
                   {/* when user write in email input box , handleEmailChange() 
               function will be called.*/}
 
