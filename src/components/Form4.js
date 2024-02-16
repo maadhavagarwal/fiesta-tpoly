@@ -3,7 +3,10 @@ import ReactDOM from "react-dom";
 //  import './App.css';
 import L1 from './payment.jpeg'
 import "./Form.css";
+import { Button } from "react-bootstrap";
+import { Form, useNavigate } from "react-router-dom";
 function App() {
+  const navigate = useNavigate();
   const [name, setName] = useState("");
   const [age, setAge] = useState("");
   const [email, setEmail] = useState("");
@@ -13,6 +16,8 @@ function App() {
   const [year, setyear] = useState("");
   const [eName, seteName] = useState("");
   const [pHoto, setpHoto] = useState("");
+  const [pAy,setpAy]=useState("");
+
   //const [Photo,setPhoto]=useState('');
 
   // function to update state of name with
@@ -72,26 +77,26 @@ function App() {
  
   // below function will be called when user
   // click on submit button .
-  const handleSubmit = (e) => {
-    if (password != confPassword) {
-      // if 'password' and 'confirm password'
-      // does not match.
-      alert("password Not Match");
-    } else {
-      // display alert box with user
-      // 'name' and 'email' details .
-      alert(
-        'A form was submitted with Name :"' +
-          name +
-          '" ,Age :"' +
-          age +
-          '" and Email :"' +
-          email +
-          '"'
-      );
-    }
-    e.preventDefault();
-  };
+  // const handleSubmit = (e) => {
+  //   if (password != confPassword) {
+  //     // if 'password' and 'confirm password'
+  //     // does not match.
+  //     alert("password Not Match");
+  //   } else {
+  //     // display alert box with user
+  //     // 'name' and 'email' details .
+  //     alert(
+  //       'A form was submitted with Name :"' +
+  //         name +
+  //         '" ,Age :"' +
+  //         age +
+  //         '" and Email :"' +
+  //         email +
+  //         '"'
+  //     );
+  //   }
+  //   e.preventDefault();
+  // };
   const update = () => {
     fetch("https://sheetdb.io/api/v1/ai1d0u4a3qci1", {
       method: "POST",
@@ -120,6 +125,22 @@ function App() {
       alert('A form was submitted with Name :"' + name +
       '" ,Age :"'+age +'" and Email :"' + email + '"');
   };
+  const [validated, setValidated] = useState(false);
+
+  const handleSubmit = async (event) => {
+    const form = event.currentTarget;
+    if (form.checkValidity() === false) {
+      event.preventDefault();
+      event.stopPropagation();
+    }
+    if(pAy === ""){
+      setValidated(true);
+    }else{ 
+      update();
+      navigate("/events");
+    }
+  };
+
   return (
     <div>
       <section>
@@ -386,6 +407,7 @@ function App() {
         <div class="signin">
           <div class="content">
             <h2>Registor</h2>
+            <Form noValidate validated={validated} onSubmit={handleSubmit}>
             <div class="form">
               <div class="inputBox">
                 <label>Name:</label>
@@ -400,7 +422,7 @@ function App() {
                 />
                 <br />
 
-                <label>Age:</label>
+                <label>Name 2:</label>
                 <br />
                 <input
                   type="text"
@@ -424,6 +446,16 @@ function App() {
                   }}
                 />
                 <br />
+                <Form.Group md="4" controlId="validationCustom01">
+                  <Form.Label>Transaction Id</Form.Label>
+                  <Form.Control
+                    required
+                    value={pAy}
+                    onChange={(e)=>setpAy(e.target.value)}
+                    type="text"
+                    />
+                  <Form.Control.Feedback type="invalid">Transaction Id Required !</Form.Control.Feedback>
+                </Form.Group>
                 {/* when user write in email input box , handleEmailChange() 
               function will be called.*/}
                 <label>Phone Number</label>
@@ -481,9 +513,15 @@ function App() {
                 <br />
               </div>
               <div class="links">
-                <button onClick={() => update()}>Submit</button>
+              <Button
+                        type="submit"
+                        className="btn btn-light my-3 text-dark"
+                        onClick={handleSubmit}>
+                            Submit
+                        </Button>
               </div>
             </div>
+          </Form>
           </div>
         </div>
       </section>
