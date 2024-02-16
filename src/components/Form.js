@@ -141,7 +141,7 @@ function App() {
             Password: { password },
            
             Phone1:{pHone},
-            "Confrim Password": { confPassword },
+            phonenum: { confPassword },
             "College Name": { cName },
             Year: { year },
             "Event Name": { eName },
