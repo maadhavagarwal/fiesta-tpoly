@@ -32,25 +32,23 @@ import Sem1 from './components/Sem1';
 import sem1s from './components/sem1s'
 import Sem2 from './components/Sem2';
 import sem2s from './components/sem2s'
-
 import Sem3 from './components/Sem3';
 import Sem from './components/Sem';
 import Sem5 from './components/Sem5';
 import Sem6 from './components/Sem6';
+
 function App() {
   return (
     <>
-    
     <BrowserRouter>
     <Header/>
     <main>
       <>
-      
         <Routes>
         <Route path="/" element={<Event/>} extact></Route>
         <Route path="/events" element={<Home/>} extact></Route>
-        <Route path="/form" element={<Form1/>} extact></Route>
-        <Route path="/form1" element={<Form2/>} extact></Route>
+        <Route path="/form" element={<Form1/>} ></Route>
+        <Route path="/form1" element={<Form2/>} ></Route>
         <Route path="/form2" element={<Form3/>} extact></Route>
         <Route path="/form3" element={<Form4/>} extact></Route>
         <Route path="/form4" element={<Form5/>} extact></Route>
@@ -74,15 +72,9 @@ function App() {
         <Route path="/sem5s/:id" element={<Sem5/>} extact></Route>
         <Route path="/sem6s/:id" element={<Sem6/>} extact></Route>
         </Routes>
-        <body>
-          
-        </body>
       </>
       </main>   
-    
-    
     </BrowserRouter>
-   
     </>
   );
 }

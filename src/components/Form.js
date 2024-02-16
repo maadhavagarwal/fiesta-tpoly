@@ -1,17 +1,17 @@
 import React, { useState } from "react";
 import ReactDOM from "react-dom";
-import Payment from './payment'
-import L1 from './payment.jpeg'
-import { Link } from "react-router-dom";
+import Payment from "./payment";
+import L1 from "./payment.jpeg";
+import { Link, useNavigate } from "react-router-dom";
 //  import './App.css';
 import "./Form.css";
-import reCAPTCHA from "react-google-recaptcha";
-import { Form } from "react-bootstrap";
+import { Button, Form } from "react-bootstrap";
 function App() {
+  const navigate = useNavigate();
   const [name, setName] = useState("");
   const [nae1, setNae1] = useState("");
-  const [pHone,setpHone]=useState("")  
-  const [pHone1,setpHone1]=useState("")  
+  const [pHone, setpHone] = useState("");
+  const [pHone1, setpHone1] = useState("");
   const [age, setAge] = useState("");
   const [email, setEmail] = useState("");
   const [password, setPassword] = useState("");
@@ -19,33 +19,39 @@ function App() {
   const [cName, setcName] = useState("");
   const [year, setyear] = useState("");
   const [eName, seteName] = useState("");
-  const [nName3,setnName3]=useState("");
-  const [nName4,setnName4]=useState("");
+  const [nName3, setnName3] = useState("");
+  const [nName4, setnName4] = useState("");
   //const [pHoto,setpHoto]=useState("");
-  const [nName6,setnName6]=useState("");
-  const [Ag61,setAg61]=useState("");
-  const [coName,setcoName]=useState("");
-  const [phOne,setphOne]=useState("")
-  const [pAy,setpAy]=useState("")
+  const [nName6, setnName6] = useState("");
+  const [Ag61, setAg61] = useState("");
+  const [coName, setcoName] = useState("");
+  const [phOne, setphOne] = useState("");
+  const [pAy, setpAy] = useState("");
   //const [Photo,setPhoto]=useState('');
 
-    const guardarArchivo = (e) =>{
-      var file = e.target.files[0] //the file
-      var reader = new FileReader() //this for convert to Base64 
-      reader.readAsDataURL(e.target.files[0]) //start conversion...
-      reader.onload = function (e) { //.. once finished..
-        var rawLog = reader.result.split(',')[1]; //extract only thee file data part
-        var dataSend = { dataReq: { data: rawLog, name: file.name, type: file.type }, fname: "uploadFilesToGoogleDrive" }; //preapre info to send to API
-        fetch('https://script.google.com/macros/s/AKfycbww4NMBAbnskGJc2_kUmLwTr5FUYMUAo75e4dz2z10PYOMvtbaEbbmFu92Jj-b61RJI/exec', //your AppsScript URL
-          { method: "POST", body: JSON.stringify(dataSend) }) //send to Api
-          .then(res => res.json()).then((a) => {
-            console.log(a) //See response
-          }).catch(e => console.log(e)) // Or Error in console
-      }}
-    
-  
-  
-  
+  const guardarArchivo = (e) => {
+    var file = e.target.files[0]; //the file
+    var reader = new FileReader(); //this for convert to Base64
+    reader.readAsDataURL(e.target.files[0]); //start conversion...
+    reader.onload = function (e) {
+      //.. once finished..
+      var rawLog = reader.result.split(",")[1]; //extract only thee file data part
+      var dataSend = {
+        dataReq: { data: rawLog, name: file.name, type: file.type },
+        fname: "uploadFilesToGoogleDrive",
+      }; //preapre info to send to API
+      fetch(
+        "https://script.google.com/macros/s/AKfycbww4NMBAbnskGJc2_kUmLwTr5FUYMUAo75e4dz2z10PYOMvtbaEbbmFu92Jj-b61RJI/exec", //your AppsScript URL
+        { method: "POST", body: JSON.stringify(dataSend) }
+      ) //send to Api
+        .then((res) => res.json())
+        .then((a) => {
+          console.log(a); //See response
+        })
+        .catch((e) => console.log(e)); // Or Error in console
+    };
+  };
+
   // function to update state of name with
   // value enter by user in form
   const handleChange = (e) => {
@@ -54,7 +60,6 @@ function App() {
   const handlephOneChange = (e) => {
     setphOne(e.target.value);
   };
-
 
   const handleeNameChange = (e) => {
     seteName(e.target.value);
@@ -84,19 +89,19 @@ function App() {
   const handleEmailChange = (e) => {
     setEmail(e.target.value);
   };
-  const handlenName3Change= (e) => {
+  const handlenName3Change = (e) => {
     setnName3(e.target.value);
   };
-  const handlenName6Change= (e) => {
+  const handlenName6Change = (e) => {
     setnName6(e.target.value);
   };
-  const handleAg61Change= (e) => {
+  const handleAg61Change = (e) => {
     setAg61(e.target.value);
   };
-  const handlecoNameChange= (e) => {
+  const handlecoNameChange = (e) => {
     setcoName(e.target.value);
   };
-  const handlenName4Change= (e) => {
+  const handlenName4Change = (e) => {
     setnName4(e.target.value);
   };
   // function to update state of password with
@@ -107,7 +112,7 @@ function App() {
   const handlepAyChange = (e) => {
     setpAy(e.target.value);
   };
-  
+
   // function to update state of confirm password
   // with value enter by user in form
   const handleConfPasswordChange = (e) => {
@@ -115,51 +120,68 @@ function App() {
   };
   // below function will be called when user
   // click on submit button .
-  
 
   const update = () => {
-    fetch("https://sheetdb.io/api/v1/9c1y64gy3nu3r", 
-    {
+    fetch("https://sheetdb.io/api/v1/9c1y64gy3nu3r", {
       method: "POST",
       headers: {
-        Accept: "application/json",
         "Content-Type": "application/json",
       },
-      
-      body: JSON.stringify({
-      
-        data: [
 
+      body: JSON.stringify({
+        data: [
           {
-            
             Name: { name },
-            Name3 : { nName3 },
-            Name4:{nName4},
+            Name3: { nName3 },
+            Name4: { nName4 },
             Nae1: { nae1 },
             Email: { email },
             Age: { age },
             Password: { password },
-            Phone:{pHone},
-            Phone1:{pHone1},
+            Phone: { pHone },
+            Phone1: { pHone1 },
             "Confrim Password": { confPassword },
             "College Name": { cName },
             Year: { year },
             "Event Name": { eName },
-            Transtion:{pAy},
-            PhoneNumber:{phOne}
-          }
+            Transtion: { pAy },
+            PhoneNumber: { phOne },
+          },
         ],
-       
       }),
-    } )
+    })
       .then((response) => response.json())
       .then((data) => console.log(data));
-      //.then((data)=><Link to="/"></Link>)
-      alert('A form was submitted with Name :"' + name +
-      '" ,Age :"'+age +'" and Email :"' + email + '"');
-      
-      
+    //.then((data)=><Link to="/"></Link>)
+    alert(
+      'A form was submitted with Name :"' +
+        name +
+        '" ,Age :"' +
+        age +
+        '" and Email :"' +
+        email +
+        '"'
+    );
   };
+
+
+
+  const [validated, setValidated] = useState(false);
+
+  const handleSubmit = async (event) => {
+    const form = event.currentTarget;
+    if (form.checkValidity() === false) {
+      event.preventDefault();
+      event.stopPropagation();
+    }
+    if(pAy === ""){
+      setValidated(true);
+    }else{ 
+      update();
+      navigate("/events");
+    }
+  };
+
   return (
     <div>
       <section>
@@ -423,15 +445,14 @@ function App() {
         <span></span>
         <span></span>
         <span></span>
-      
+
         <div class="signin">
-        
           <div class="content">
             <h2>Register</h2>
+            <Form noValidate validated={validated} onSubmit={handleSubmit}>
             <div class="form">
               <div class="inputBox">
-                
-              <label> Group Name:</label>
+                <label> Group Name:</label>
                 <br />
                 <input
                   type="text"
@@ -440,8 +461,8 @@ function App() {
                   onChange={(e) => {
                     handleChange(e);
                   }}
-                />
-                
+                  />
+
                 <label>Name 1</label>
                 <br />
                 <input
@@ -451,7 +472,7 @@ function App() {
                   onChange={(e) => {
                     handleeNameChange(e);
                   }}
-                />
+                  />
                 <br />
 
                 <label>Age:</label>
@@ -463,7 +484,7 @@ function App() {
                   onChange={(e) => {
                     handleAgeChange(e);
                   }}
-                />
+                  />
                 <br />
                 {/*when user write in age input box , handleAgeChange()
                function will be called. */}
@@ -476,7 +497,7 @@ function App() {
                   onChange={(e) => {
                     handleEmailChange(e);
                   }}
-                />
+                  />
                 <br />
                 <label>Phone Number</label>
                 <br />
@@ -487,7 +508,7 @@ function App() {
                   onChange={(e) => {
                     handlephOneChange(e);
                   }}
-                />
+                  />
                 <br />
                 <label>Name 2:</label>
                 <br />
@@ -498,9 +519,9 @@ function App() {
                   onChange={(e) => {
                     handlePasswordChange(e);
                   }}
-                />
+                  />
                 <br />
-                
+
                 <label>Name 3:</label>
                 <br />
                 <input
@@ -510,7 +531,7 @@ function App() {
                   onChange={(e) => {
                     handlenName3Change(e);
                   }}
-                />
+                  />
                 <br />
                 <label>Business description</label>
                 <br />
@@ -521,9 +542,9 @@ function App() {
                   onChange={(e) => {
                     handlepHoneChange(e);
                   }}
-                />
+                  />
                 <br />
-                
+
                 {/* when user write in email input box , handleEmailChange() 
               function will be called.*/}
                 <label>College Name</label>
@@ -535,20 +556,18 @@ function App() {
                   onChange={(e) => {
                     handlecNameChange(e);
                   }}
-                />
+                  />
                 <br />
-                <label>Transaction Id</label>
-                <br />
-                <input
-                  type="text"
-                  value={pAy}
-                  required
-                  onChange={(e) => {
-                    handlepAyChange(e);
-                  }}
-                />
-                
-
+                <Form.Group md="4" controlId="validationCustom01">
+                  <Form.Label>Transaction Id</Form.Label>
+                  <Form.Control
+                    required
+                    value={pAy}
+                    onChange={(e)=>setpAy(e.target.value)}
+                    type="text"
+                    />
+                  <Form.Control.Feedback type="invalid">Transaction Id Required !</Form.Control.Feedback>
+                </Form.Group>
                 {/* when user write in password input box ,
                   handlePasswordChange() function will be called.*/}
 
@@ -556,38 +575,43 @@ function App() {
                     handleConfPasswordChange() function will be called.*/}
               </div>
               <div>
-              <img src={L1} alt="cur" className="center" style={{height:330,width:"100%",position:'center',margin:0}}/>
-              <label>Payment SS</label>
-              
+                <img
+                  src={L1}
+                  alt="cur"
+                  className="center"
+                  style={{
+                    height: 330,
+                    width: "100%",
+                    position: "center",
+                    margin: 0,
+                  }}
+                  />
+                <label>Payment SS</label>
+
                 <br />
                 <input
                   type="file"
-                  
                   required
-                  onChange={(e) =>  guardarArchivo(e)}
-                  
-                />
+                  onChange={(e) => guardarArchivo(e)}
+                  />
                 <br />
               </div>
-              <Form>
-              <div class="links">
-                
-                
-                <Link to='/events' className='btn btn-light my-3 text-dark' onClick={() => update() } >Submit</Link>
-     
-              </div>
-              </Form>
+                <div class="links">
+                  <Button
+                  type="submit"
+                    className="btn btn-light my-3 text-dark"
+                    onClick={handleSubmit}
+                    >
+                    Submit
+                  </Button>
+                </div>
             </div>
+          </Form>
           </div>
-           
-          </div>
-         
-        </section>
-       
-   </div>
-       
-   
+        </div>
+      </section>
+    </div>
   );
 }
 
-export default App
+export default App;
