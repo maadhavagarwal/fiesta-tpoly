@@ -572,7 +572,7 @@ function App() {
               <Form>
               <div class="links">
                 
-                <Link to='/events' className='btn btn-light my-3' onClick={() => update() } >Submit</Link>
+                <Link to='/events' className='btn btn-light my-3 text-dark' onClick={() => update() } >Submit</Link>
      
               </div>
               </Form>
