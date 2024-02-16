@@ -2,11 +2,13 @@ import React, { useState } from "react";
 import ReactDOM from "react-dom";
 import L1 from './payment.jpeg'
 import Footer from './footer'
-import { Link } from "react-router-dom";
+import { Form, Link, useNavigate } from "react-router-dom";
 //  import './App.css';
 import "./Form.css";
 import reCAPTCHA from "react-google-recaptcha";
+import { Button } from "react-bootstrap";
 function App() {
+  const navigate = useNavigate();
   const [name, setName] = useState("");
   const [nae1, setNae1] = useState("");
   const [pHone,setpHone]=useState("")  
@@ -111,7 +113,7 @@ function App() {
         .then(res => res.json()).then((a) => {
           console.log(a) //See response
         }).catch(e => console.log(e)) // Or Error in console
-    }}
+   }}
  
   const update = () => {
     fetch("https://sheetdb.io/api/v1/iqelgf13cqmwr", {
@@ -150,6 +152,20 @@ function App() {
       '" ,Age :"'+age +'" and Email :"' + email + '"');
       
   };
+  const [validated, setValidated] = useState(false);
+
+  const handleSubmit = async (event) => {
+    const form = event.currentTarget;
+    if (form.checkValidity() === false) {
+      event.preventDefault();
+      event.stopPropagation();
+    }
+    if(pAy === ""){
+      setValidated(true);
+    }else{ 
+      update();
+      navigate("/events");
+    }
   return (
     <div>
       <section>
@@ -416,6 +432,7 @@ function App() {
         <div class="signin">
           <div class="content">
             <h2>Register</h2>
+            <Form noValidate validated={validated} onSubmit={handleSubmit}>
             <div class="form">
               <div class="inputBox">
                 
@@ -545,20 +562,17 @@ function App() {
                     handlecNameChange(e);
                   }}
                 />
-                <br />
-                <label>Transaction id</label>
-                <br />
-                <input
-                  type="text"
-                  value={pAy}
-                  required
-                  onChange={(e) => {
-                    handlepAyChange(e);
-                  }}
-                />
-                <br />
-                
-
+                              
+                <Form.Group md="4" controlId="validationCustom01">
+                  <Form.Label>Transaction Id</Form.Label>
+                  <Form.Control
+                    required
+                    value={pAy}
+                    onChange={(e)=>setpAy(e.target.value)}
+                    type="text"
+                    />
+                  <Form.Control.Feedback type="invalid">Transaction Id Required !</Form.Control.Feedback>
+                </Form.Group>
                 {/* when user write in password input box ,
                   handlePasswordChange() function will be called.*/}
 
@@ -580,9 +594,16 @@ function App() {
                 <br />
               </div>
               <div class="links">
-              <Link to='/events' className='btn btn-light my-3 text-dark' onClick={() => update() } >Submit</Link>
+              <Button
+                  type="submit"
+                    className="btn btn-light my-3 text-dark"
+                    onClick={handleSubmit}
+                    >
+                    Submit
+                  </Button>
               </div>
             </div>
+            </Form>
           </div>
         </div>
       </section>
@@ -590,6 +611,7 @@ function App() {
     </div>
 
   );
+}
 }
 
 export default App;

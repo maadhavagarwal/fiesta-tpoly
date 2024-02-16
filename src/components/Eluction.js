@@ -47,7 +47,7 @@ const {id} =useParams()
 <ol>•	Judging criteria will depend on presentation, introduction, depth of the topic, creativity, and grasp of language.</ol> 
 <ol>•	Your speech shouldn’t deviate from the topic. </ol>
 <ol>•	The judges' decision will be final. </ol>
-<ol>•	Any external media (e.g., PowerPoint, poster, etc.) is not allowed."</ol>
+<ol>•	Any external media (e.g., PowerPoint, poster, etc.) is allowed."</ol>
 
        </ol>
       </ListGroup>
