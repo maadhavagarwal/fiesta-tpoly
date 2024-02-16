@@ -461,17 +461,8 @@ function App() {
                     }}
                   />
                   <br />
-                 <label>Transaction id</label>
-                  <br/>
-                  <input
-                    type="text"
-                    value={pAy}
-                    required
-                    onChange={(e) => {
-                      handlepAyChange(e);
-                    }}
-                  />
-                  <br />
+                 
+                  
                   {/* when user write in email input box , handleEmailChange() 
               function will be called.*/}
 
