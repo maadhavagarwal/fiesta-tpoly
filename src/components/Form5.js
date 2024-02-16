@@ -569,7 +569,7 @@ function App() {
                     required
                     value={pAy}
                     onChange={(e)=>setpAy(e.target.value)}
-                    type="text"
+                    type="number"
                     />
                   <Form.Control.Feedback type="invalid">Transaction Id Required !</Form.Control.Feedback>
                 </Form.Group>
