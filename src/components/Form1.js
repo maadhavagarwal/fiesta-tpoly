@@ -4,6 +4,7 @@ import ReactDOM from "react-dom";
 import "./Form.css";
 import L1 from './payment.jpeg'
 import { Button } from "react-bootstrap";
+import { Form } from "react-bootstrap";
 function Form() {
     const navigate = useNavigate();
   const [name, setName] = useState("");
