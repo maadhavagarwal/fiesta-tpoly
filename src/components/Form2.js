@@ -461,7 +461,7 @@ function App() {
                     }}
                   />
                   <br />
-                 {/*} <label>Transaction id</label>
+                 <label>Transaction id</label>
                   <br/>
                   <input
                     type="text"
@@ -471,7 +471,7 @@ function App() {
                       handlepAyChange(e);
                     }}
                   />
-                  <br />*/}
+                  <br />
                   {/* when user write in email input box , handleEmailChange() 
               function will be called.*/}
 
