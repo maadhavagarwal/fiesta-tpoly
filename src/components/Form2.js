@@ -497,18 +497,18 @@ function App() {
                       handleeNameChange(e);
                     }}
                   />
-                  <Form.Group md="4" controlId="validationCustom01">
-                    <Form.Label>Transaction Id</Form.Label>
-                    <Form.Control
-                      required
-                      value={pAy}
-                      onChange={(e) => setpAy(e.target.value)}
-                      type="text"
-                    />
-                    <Form.Control.Feedback type="invalid">
-                      Transaction Id Required !
-                    </Form.Control.Feedback>
-                  </Form.Group>
+                  <br />
+                  <label>Transaction id</label>
+                  <br />
+                  <input
+                    type="text"
+                    value={pAy}
+                    required
+                    onChange={(e) => {
+                      handlepAyChange(e);
+                    }}
+                  />
+                  
 
                   {/* when user write in password input box ,
                   handlePasswordChange() function will be called.*/}
