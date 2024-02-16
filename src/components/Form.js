@@ -562,10 +562,10 @@ function App() {
                   }}
                   />
                 <br />
-<<<<<<< Updated upstream
+
 
                 
-=======
+
                 <Form.Group md="4" controlId="validationCustom01">
                   <Form.Label>Transaction Id</Form.Label>
                   <Form.Control
@@ -576,7 +576,7 @@ function App() {
                     />
                   <Form.Control.Feedback type="invalid">Transaction Id Required !</Form.Control.Feedback>
                 </Form.Group> 
->>>>>>> Stashed changes
+
 
 
                 <Form.Group md="4" controlId="validationCustom01">
