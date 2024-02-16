@@ -2,13 +2,11 @@ import React, { useState } from "react";
 import ReactDOM from "react-dom";
 import L1 from './payment.jpeg'
 import Footer from './footer'
-import { Form, Link, useNavigate } from "react-router-dom";
+import { Link } from "react-router-dom";
 //  import './App.css';
 import "./Form.css";
 import reCAPTCHA from "react-google-recaptcha";
-import { Button } from "react-bootstrap";
 function App() {
-  const navigate = useNavigate();
   const [name, setName] = useState("");
   const [nae1, setNae1] = useState("");
   const [pHone,setpHone]=useState("")  
@@ -16,7 +14,7 @@ function App() {
   const [age, setAge] = useState("");
   const [email, setEmail] = useState("");
   const [password, setPassword] = useState("");
-  const [confPassword, setConfPassword] = useState("");
+  const [confPassword, setconfPassword] = useState("");
   const [cName, setcName] = useState("");
   const [year, setyear] = useState("");
   const [eName, seteName] = useState("");
@@ -96,8 +94,8 @@ function App() {
   };
   // function to update state of confirm password
   // with value enter by user in form
-  const handleConfPasswordChange = (e) => {
-    setConfPassword(e.target.value);
+  const handleconfPasswordChange = (e) => {
+    setconfPassword(e.target.value);
   };
   // below function will be called when user
   // click on submit button .
@@ -113,7 +111,7 @@ function App() {
         .then(res => res.json()).then((a) => {
           console.log(a) //See response
         }).catch(e => console.log(e)) // Or Error in console
-   }}
+    }}
  
   const update = () => {
     fetch("https://sheetdb.io/api/v1/iqelgf13cqmwr", {
@@ -152,20 +150,6 @@ function App() {
       '" ,Age :"'+age +'" and Email :"' + email + '"');
       
   };
-  const [validated, setValidated] = useState(false);
-
-  const handleSubmit = async (event) => {
-    const form = event.currentTarget;
-    if (form.checkValidity() === false) {
-      event.preventDefault();
-      event.stopPropagation();
-    }
-    if(pAy === ""){
-      setValidated(true);
-    }else{ 
-      update();
-      navigate("/events");
-    }
   return (
     <div>
       <section>
@@ -432,7 +416,6 @@ function App() {
         <div class="signin">
           <div class="content">
             <h2>Register</h2>
-            <Form noValidate validated={validated} onSubmit={handleSubmit}>
             <div class="form">
               <div class="inputBox">
                 
@@ -487,10 +470,10 @@ function App() {
                 <br />
                 <input
                   type="text"
-                  value={eName}
+                  value={confPassword}
                   required
                   onChange={(e) => {
-                    handleeNameChange(e);
+                    handleconfPasswordChange(e);
                   }}
                 />
                 <br />
@@ -562,18 +545,21 @@ function App() {
                     handlecNameChange(e);
                   }}
                 />
-                              
+                <br />
                 <label>Transaction id</label>
-                  <br/>
-                  <input
-                    type="text"
-                    value={pAy}
-                    required
-                    onChange={(e) => {
-                      handlepAyChange(e);
-                    }}
-                  />
-                  <br /> {/* when user write in password input box ,
+                <br />
+                <input
+                  type="text"
+                  value={pAy}
+                  required
+                  onChange={(e) => {
+                    handlepAyChange(e);
+                  }}
+                />
+                <br />
+                
+
+                {/* when user write in password input box ,
                   handlePasswordChange() function will be called.*/}
 
                 {/* when user write in confirm password  input box ,
@@ -594,16 +580,9 @@ function App() {
                 <br />
               </div>
               <div class="links">
-              <Button
-                  type="submit"
-                    className="btn btn-light my-3 text-dark"
-                    onClick={handleSubmit}
-                    >
-                    Submit
-                  </Button>
+              <Link to='/events' className='btn btn-light my-3 text-dark' onClick={() => update() } >Submit</Link>
               </div>
             </div>
-            </Form>
           </div>
         </div>
       </section>
@@ -611,7 +590,6 @@ function App() {
     </div>
 
   );
-}
 }
 
 export default App;

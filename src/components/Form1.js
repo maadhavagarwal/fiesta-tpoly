@@ -3,7 +3,8 @@ import { Link } from "react-router-dom";
 import ReactDOM from "react-dom";
 import "./Form.css";
 import L1 from './payment.jpeg'
-function Form() {
+import { Button,Form } from "react-bootstrap";
+function App() {
   const [name, setName] = useState("");
   const [age, setAge] = useState("");
   const [email, setEmail] = useState("");
@@ -63,6 +64,7 @@ function Form() {
   };
   // below function will be called when user
   // click on submit button .
+  const [validated, setValidated] = useState(false);
   const handleSubmit = (e) => {
     if (password != confPassword) {
       // if 'password' and 'confirm password'
@@ -393,6 +395,7 @@ function Form() {
         <div class="signin">
           <div class="content">
             <h2>Registor</h2>
+            <Form noValidate validated={validated} onSubmit={handleSubmit}></Form>
             <div class="form">
               <div class="inputBox">
                 <label>Name:</label>
@@ -468,18 +471,21 @@ function Form() {
                     handleeNameChange(e);
                   }}
                 />
+               
                 <br />
-                <label>Transaction id</label>
-                <br />
-                <input
-                  type="text"
-                  value={pAy}
-                  required
-                  onChange={(e) => {
-                    handlepAyChange(e);
-                  }}
-                />
-                <br />
+                <Form.Group md="4" controlId="validationCustom01">
+                    <Form.Label>Transaction Id</Form.Label>
+                    <Form.Control
+                      required
+                      value={pAy}
+                      onChange={(e) => setpAy(e.target.value)}
+                      type="text"
+                    />
+                    <Form.Control.Feedback type="invalid">
+                      Transaction Id Required !
+                    </Form.Control.Feedback>
+                  </Form.Group>
+
 
                 {/* when user write in password input box ,
                   handlePasswordChange() function will be called.*/}
@@ -490,9 +496,7 @@ function Form() {
               <div>
               <img src={L1} alt="cur" className="center" style={{height:375,position:'center',margin:0}}/>
               <label>Payment SS</label>
-              <input
-                  type="text"
-                 />
+              
                 <br />
                 <input
                   type="file"
@@ -517,4 +521,4 @@ function Form() {
   );
 }
 
-export default Form;
+export default App;
