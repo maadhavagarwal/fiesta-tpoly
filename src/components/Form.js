@@ -2,10 +2,11 @@ import React, { useState } from "react";
 import ReactDOM from "react-dom";
 import Payment from './payment'
 import L1 from './payment.jpeg'
-
+import { Link } from "react-router-dom";
 //  import './App.css';
 import "./Form.css";
 import reCAPTCHA from "react-google-recaptcha";
+import { Form } from "react-bootstrap";
 function App() {
   const [name, setName] = useState("");
   const [nae1, setNae1] = useState("");
@@ -25,6 +26,7 @@ function App() {
   const [Ag61,setAg61]=useState("");
   const [coName,setcoName]=useState("");
   const [phOne,setphOne]=useState("")
+  const [pAy,setpAy]=useState("")
   //const [Photo,setPhoto]=useState('');
 
     const guardarArchivo = (e) =>{
@@ -102,6 +104,9 @@ function App() {
   const handlePasswordChange = (e) => {
     setPassword(e.target.value);
   };
+  const handlepAyChange = (e) => {
+    setpAy(e.target.value);
+  };
   
   // function to update state of confirm password
   // with value enter by user in form
@@ -111,6 +116,7 @@ function App() {
   // below function will be called when user
   // click on submit button .
   
+
   const update = () => {
     fetch("https://sheetdb.io/api/v1/9c1y64gy3nu3r", {
       method: "POST",
@@ -137,7 +143,7 @@ function App() {
             "College Name": { cName },
             Year: { year },
             "Event Name": { eName },
-           
+           Transition:{pAy},
             PhoneNumber:{phOne}
           }
         ],
@@ -146,8 +152,11 @@ function App() {
     } )
       .then((response) => response.json())
       .then((data) => console.log(data));
+      //.then((data)=><Link to="/"></Link>)
       alert('A form was submitted with Name :"' + name +
       '" ,Age :"'+age +'" and Email :"' + email + '"');
+      <Link TO="/">onClick</Link>
+      
   };
   return (
     <div>
@@ -414,6 +423,7 @@ function App() {
         <span></span>
       
         <div class="signin">
+        
           <div class="content">
             <h2>Register</h2>
             <div class="form">
@@ -529,10 +539,10 @@ function App() {
                 <br />
                 <input
                   type="text"
-                  value={cName}
+                  value={pAy}
                   required
                   onChange={(e) => {
-                    handlecNameChange(e);
+                    handlepAyChange(e);
                   }}
                 />
                 
@@ -558,15 +568,17 @@ function App() {
                 <br />
               </div>
               <div class="links">
-                <button onClick={() => update()}>Submit</button>
+                <button onClick={() => update() }>Submit</button>
               </div>
             </div>
           </div>
-        </div>
-        
-      </section>
-      
-    </div>
+           
+          </div>
+         
+        </section>
+       
+   </div>
+       
    
   );
 }

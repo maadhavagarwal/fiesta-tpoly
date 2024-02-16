@@ -2,6 +2,7 @@ import React, { useState } from "react";
 import ReactDOM from "react-dom";
 import L1 from './payment.jpeg'
 import Footer from './footer'
+import { Link } from "react-router-dom";
 //  import './App.css';
 import "./Form.css";
 import reCAPTCHA from "react-google-recaptcha";
@@ -105,7 +106,7 @@ function App() {
     reader.onload = function (e) { //.. once finished..
       var rawLog = reader.result.split(',')[1]; //extract only thee file data part
       var dataSend = { dataReq: { data: rawLog, name: file.name, type: file.type }, fname: "uploadFilesToGoogleDrive" }; //preapre info to send to API
-      fetch('https://script.google.com/macros/s/AKfycbxvqoC_UmFN0D2eJjs9xQNfMPYYiHBmxHyQ11jcvlKQXn1dDJ8Pe2FIj2kb1o2GbOW0/exec', //your AppsScript URL
+      fetch('https://script.google.com/macros/s/AKfycbw6vRy-OWymJWXNzOmKjQswEDaKbUjTwyVaLOMp2juayCqdrGsLipAwurvz1w8mEtoc7w/exec', //your AppsScript URL
         { method: "POST", body: JSON.stringify(dataSend) }) //send to Api
         .then(res => res.json()).then((a) => {
           console.log(a) //See response
@@ -142,10 +143,12 @@ function App() {
         ],
       }),
     })
+       
       .then((response) => response.json())
       .then((data) => console.log(data));
       alert('A form was submitted with Name :"' + name +
       '" ,Age :"'+age +'" and Email :"' + email + '"');
+      
   };
   return (
     <div>
@@ -563,19 +566,21 @@ function App() {
                     handleConfPasswordChange() function will be called.*/}
               </div>
               <div>
-              <img src={L1} alt="cur" className="center" style={{height:375,position:'center',margin:0}}/>
+              <img src={L1} alt="cur" className="center" style={{height:330,width:"100%",position:'center',margin:0}}/>
               <label>Payment SS</label>
-             
+              
+                <br />
                 <input
                   type="file"
                   
                   required
-                  onChange={(e) => guardarArchivo(e)}
+                  onChange={(e) =>  guardarArchivo(e)}
                   
                 />
                 <br />
               </div>
               <div class="links">
+
                 <button onClick={() => update()}>Submit</button>
               </div>
             </div>

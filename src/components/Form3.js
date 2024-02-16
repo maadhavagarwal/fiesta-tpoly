@@ -25,7 +25,7 @@ function App() {
     reader.onload = function (e) { //.. once finished..
       var rawLog = reader.result.split(',')[1]; //extract only thee file data part
       var dataSend = { dataReq: { data: rawLog, name: file.name, type: file.type }, fname: "uploadFilesToGoogleDrive" }; //preapre info to send to API
-      fetch('https://script.google.com/macros/s/AKfycbyJKgZxuLa8VIc0XLeuLKkw_UBoOU2hufTr0wra8HHMy7yb7nPSQ7b5Bs3OiJBuBrUZ/exec', //your AppsScript URL
+      fetch('https://script.google.com/macros/s/AKfycbzVom5ENeCXrYYmlpZ21U9AxWVXu_uMS3Nsr1NWBxuBtoLp7uIV3BbihW-BjAbGMLyi/exec', //your AppsScript URL
         { method: "POST", body: JSON.stringify(dataSend) }) //send to Api
         .then(res => res.json()).then((a) => {
           console.log(a) //See response
