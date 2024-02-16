@@ -138,13 +138,12 @@ function App() {
             Email: { email },
             Age: { age },
             Password: { password },
-<<<<<<< HEAD
+
            
             Phone1:{pHone},
-=======
             Phone: { pHone },
             Phone1: { pHone1 },
->>>>>>> 841b1805fae8229179d984068d93470b9574ae6d
+
             "Confrim Password": { confPassword },
             "College Name": { cName },
             Year: { year },
@@ -563,10 +562,10 @@ function App() {
                   }}
                   />
                 <br />
-<<<<<<< HEAD
+
                 
 
-=======
+
                 <Form.Group md="4" controlId="validationCustom01">
                   <Form.Label>Transaction Id</Form.Label>
                   <Form.Control
@@ -577,7 +576,7 @@ function App() {
                     />
                   <Form.Control.Feedback type="invalid">Transaction Id Required !</Form.Control.Feedback>
                 </Form.Group>
->>>>>>> 841b1805fae8229179d984068d93470b9574ae6d
+
                 {/* when user write in password input box ,
                   handlePasswordChange() function will be called.*/}
 
