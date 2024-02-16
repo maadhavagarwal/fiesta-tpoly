@@ -563,17 +563,17 @@ function App() {
                   }}
                 />
                               
-                <Form.Group md="4" controlId="validationCustom01">
-                  <Form.Label>Transaction Id</Form.Label>
-                  <Form.Control
-                    required
+                <label>Transaction id</label>
+                  <br/>
+                  <input
+                    type="text"
                     value={pAy}
-                    onChange={(e)=>setpAy(e.target.value)}
-                    type="number"
-                    />
-                  <Form.Control.Feedback type="invalid">Transaction Id Required !</Form.Control.Feedback>
-                </Form.Group>
-                {/* when user write in password input box ,
+                    required
+                    onChange={(e) => {
+                      handlepAyChange(e);
+                    }}
+                  />
+                  <br /> {/* when user write in password input box ,
                   handlePasswordChange() function will be called.*/}
 
                 {/* when user write in confirm password  input box ,

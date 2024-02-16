@@ -461,18 +461,17 @@ function App() {
                     }}
                   />
                   <br />
-                  <Form.Group md="4" controlId="validationCustom01">
-                    <Form.Label>Transaction Id</Form.Label>
-                    <Form.Control
-                      required
-                      value={pAy}
-                      onChange={(e) => setpAy(e.target.value)}
-                      type="text"
-                    />
-                    <Form.Feedback type="invalid">
-                      Transaction Id Required !
-                    </Form.Feedback>
-                  </Form.Group>
+                  <label>Transaction id</label>
+                  <br/>
+                  <input
+                    type="text"
+                    value={pAy}
+                    required
+                    onChange={(e) => {
+                      handlepAyChange(e);
+                    }}
+                  />
+                  <br />
                   {/* when user write in email input box , handleEmailChange() 
               function will be called.*/}
 
