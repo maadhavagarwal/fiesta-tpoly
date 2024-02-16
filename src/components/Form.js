@@ -15,7 +15,7 @@ function App() {
   const [age, setAge] = useState("");
   const [email, setEmail] = useState("");
   const [password, setPassword] = useState("");
-  const [confPassword, setconfPassword] = useState("");
+  const [confPassword, setConfPassword] = useState("");
   const [cName, setcName] = useState("");
   const [year, setyear] = useState("");
   const [eName, seteName] = useState("");
@@ -104,17 +104,14 @@ function App() {
   const handlePasswordChange = (e) => {
     setPassword(e.target.value);
   };
-  const handleconfPasswordChange = (e) => {
-    setconfPassword(e.target.value);
-  };
   const handlepAyChange = (e) => {
     setpAy(e.target.value);
   };
   
   // function to update state of confirm password
   // with value enter by user in form
-  const handleConfPasswordChange = (e) => {
-    setConfPassword(e.target.value);
+  const handleconfPasswordChange = (e) => {
+    setconfPassword(e.target.value);
   };
   // below function will be called when user
   // click on submit button .
@@ -143,8 +140,8 @@ function App() {
             Age: { age },
             Password: { password },
            
-            Phone1:{pHone}, 
-            Name6: {nName6 },
+            Phone1:{pHone},
+            "Confrim Password": { confPassword },
             "College Name": { cName },
             Year: { year },
             "Event Name": { eName },
@@ -485,10 +482,10 @@ function App() {
                 <br />
                 <input
                   type="text"
-                  value={nName6}
+                  value={confPassword}
                   required
                   onChange={(e) => {
-                    handlenName6Change(e);
+                    handleconfPasswordChange(e);
                   }}
                 />
                 <br />
