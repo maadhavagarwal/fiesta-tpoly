@@ -145,7 +145,7 @@ function App() {
             "College Name": { cName },
             Year: { year },
             "Event Name": { eName },
-           Transition:{pAy},
+            Transtion:{pAy},
             PhoneNumber:{phOne}
           }
         ],
@@ -571,6 +571,7 @@ function App() {
               </div>
               <Form>
               <div class="links">
+                
                 
                 <Link to='/events' className='btn btn-light my-3 text-dark' onClick={() => update() } >Submit</Link>
      

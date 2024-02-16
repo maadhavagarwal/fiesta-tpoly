@@ -506,8 +506,7 @@ function Form() {
                 <br />
               </div>
               <div class="links">
-                <button onClick={() => update()}>Submit</button>
-                <Link to='/' className='btn' onClick={() => update()}>Go Back</Link>
+              <Link to='/events' className='btn btn-light my-3 text-dark' onClick={() => update() } >Submit</Link>
      
               </div>
             </div>
