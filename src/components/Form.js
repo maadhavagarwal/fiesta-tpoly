@@ -506,7 +506,7 @@ function App() {
                 <label>Phone Number</label>
                 <br />
                 <input
-                  type="text"
+                  type="number"
                   value={confPassword}
                   required
                   onChange={(e) => {
@@ -562,8 +562,21 @@ function App() {
                   }}
                   />
                 <br />
+<<<<<<< Updated upstream
 
                 
+=======
+                <Form.Group md="4" controlId="validationCustom01">
+                  <Form.Label>Transaction Id</Form.Label>
+                  <Form.Control
+                    required
+                    value={pAy}
+                    onChange={(e)=>setpAy(e.target.value)}
+                    type="text"
+                    />
+                  <Form.Control.Feedback type="invalid">Transaction Id Required !</Form.Control.Feedback>
+                </Form.Group> 
+>>>>>>> Stashed changes
 
 
                 <Form.Group md="4" controlId="validationCustom01">

@@ -3,6 +3,7 @@ import ReactDOM from "react-dom";
 import L1 from './payment.jpeg'
 import Footer from './footer'
 import { Link } from "react-router-dom";
+import { Form } from "react-router-dom";
 //  import './App.css';
 import "./Form.css";
 import reCAPTCHA from "react-google-recaptcha";
@@ -546,17 +547,16 @@ function App() {
                   }}
                 />
                 <br />
-                <label>Transaction id</label>
-                <br />
-                <input
-                  type="text"
-                  value={pAy}
-                  required
-                  onChange={(e) => {
-                    handlepAyChange(e);
-                  }}
-                />
-                <br />
+                <Form.Group md="4" controlId="validationCustom01">
+                  <Form.Label>Transaction Id</Form.Label>
+                  <Form.Control
+                    required
+                    value={pAy}
+                    onChange={(e)=>setpAy(e.target.value)}
+                    type="text"
+                    />
+                  <Form.Control.Feedback type="invalid">Transaction Id Required !</Form.Control.Feedback>
+                </Form.Group>  <br />
                 
 
                 {/* when user write in password input box ,
