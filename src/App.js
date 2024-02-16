@@ -37,6 +37,8 @@ import Sem3 from './components/Sem3';
 import Sem from './components/Sem';
 import Sem5 from './components/Sem5';
 import Sem6 from './components/Sem6';
+
+
 function App() {
   return (
     <>
