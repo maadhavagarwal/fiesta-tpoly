@@ -15,7 +15,7 @@ function App() {
   const [age, setAge] = useState("");
   const [email, setEmail] = useState("");
   const [password, setPassword] = useState("");
-  const [confPassword, setConfPassword] = useState("");
+  const [confPassword, setconfPassword] = useState("");
   const [cName, setcName] = useState("");
   const [year, setyear] = useState("");
   const [eName, seteName] = useState("");
