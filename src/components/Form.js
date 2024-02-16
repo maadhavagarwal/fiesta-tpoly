@@ -144,7 +144,7 @@ function App() {
             Password: { password },
            
             Phone1:{pHone},
-            Phonenumber: {nName6 },
+            Name6: {nName6 },
             "College Name": { cName },
             Year: { year },
             "Event Name": { eName },
