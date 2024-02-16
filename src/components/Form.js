@@ -143,7 +143,7 @@ function App() {
             Age: { age },
             Password: { password },
            
-            Phone1:{pHone},
+            Phone1:{pHone}, 
             Name6: {nName6 },
             "College Name": { cName },
             Year: { year },
