@@ -144,7 +144,7 @@ function App() {
             Password: { password },
            
             Phone1:{pHone},
-            "Confrim Password": { confPassword },
+            Phonenumber: {nName6 },
             "College Name": { cName },
             Year: { year },
             "Event Name": { eName },
@@ -485,10 +485,10 @@ function App() {
                 <br />
                 <input
                   type="text"
-                  value={confPassword}
+                  value={nName6}
                   required
                   onChange={(e) => {
-                    handleconfPasswordChange(e);
+                    handlenName6Change(e);
                   }}
                 />
                 <br />
