@@ -130,15 +130,15 @@ function Home() {
         </Col>      );
     })}
     </Row>
-        <Row >
+       {/*} <Row >
         {sem6s.map((sem6s)=> {
           return (
             <Col key={sem6s._id} sm={12} md={6} lg={4} xl={8}>
-              {/* <h2>{course.name}</h2> */}
+              {/* <h2>{course.name}</h2> *
               <Seminar6 sem6s={sem6s}></Seminar6>
             </Col>      );
         })}  
-        </Row>
+        </Row>*/}
      
     
     </Row>
