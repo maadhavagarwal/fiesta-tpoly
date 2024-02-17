@@ -85,7 +85,7 @@ function Home() {
         </Col>      );
     })}  
     </Row>
-    <Row style={{margin:'0px'}}>
+    <Row>
     {sem1s.map((Sem1)=> {
       return (
         <Col key={sem1s._id} sm={12} md={6} lg={4} xl={8}>
