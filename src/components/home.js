@@ -28,8 +28,8 @@ import Seminar from './screen/Seminar1'
 import Seminar2 from './screen/Seminar2'
 import Seminar3 from './screen/Seminar3'
 import Seminar4 from './screen/Seminar'
-import Seminar5 from './screen/Semimar4'
-import Seminar6 from './screen/Seminar5'
+import Seminar5 from './screen/Seminar5'
+import Seminar6 from './screen/Seminar6'
 import eluctions from './eluctions'
 import Footer from './footer'
 function Home() {
@@ -86,11 +86,11 @@ function Home() {
     })}  
     </Row>
     <Row >
-    {sem1s.map((sems)=> {
+    {sem1s.map((sem1s)=> {
       return (
-        <Col key={sem1._id} sm={12} md={6} lg={4} xl={8}>
+        <Col key={sem1s._id} sm={12} md={6} lg={4} xl={8}>
           {/* <h2>{course.name}</h2> */}
-          <Seminar sems={sems}></Seminar>
+          <Seminar sem1s={sem1s}></Seminar>
         </Col>      );
     })}  
     </Row>
