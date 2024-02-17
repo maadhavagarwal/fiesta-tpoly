@@ -24,12 +24,12 @@ import master from './Master'
 import masters from './MMs'
 import Mastermr from './screen/Mastermr'
 import Eluc from './screen/Eluc'
-import Seminar from './screen/Seminar1'
-import Seminar2 from './screen/Seminar2'
-import Seminar3 from './screen/Seminar3'
-import Seminar4 from './screen/Seminar'
-import Seminar5 from './screen/Seminar5'
-import Seminar6 from './screen/Seminar6'
+import Seminar from './screen/FSem1'
+import Seminar2 from './screen/FSem2'
+import Seminar3 from './screen/FSem3'
+import Seminar4 from './screen/FSem4'
+import Seminar5 from './screen/FSem5'
+import Seminar6 from './screen/FSem6'
 import eluctions from './eluctions'
 import Footer from './footer'
 function Home() {
@@ -85,7 +85,15 @@ function Home() {
         </Col>      );
     })}  
     </Row>
-   
+    <Row style={{margin:'0px'}}>
+    {sem1s.map((Sem1)=> {
+      return (
+        <Col key={autionskill._id} sm={12} md={6} lg={4} xl={8}>
+          {/* <h2>{course.name}</h2> */}
+          <Seminar Sem1={Sem1}></Seminar>
+        </Col>      );
+    })}  
+    </Row>
     </Row>
     
   <Footer/>

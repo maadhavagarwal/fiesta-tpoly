@@ -3,11 +3,11 @@ import Th from './MKI.png'
 const Sem1=[
 {
     '_id':4,
-    'name':"Achieving Problem- Solution Fit and Product-Market Fit",
-    'description':'By: Dr. Pankaj Nandurkar',
+    'name':"Problem Solving and Ideation Workshop Helping a Million Entrepreneurs and Professionals accelerate their Growth by using Developing a Digital Mindset",
+    'description':'By: Dr. Charudatta Pande',
     'image':Th,
-    'duration':'1 DAY-10:00am-12:00pm',
-    'fee':0
+    'duration':'2 DAY-9:00am-11:00Am',
+    'fee':'Free'
    
 }
 

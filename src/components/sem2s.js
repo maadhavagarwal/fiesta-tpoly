@@ -3,10 +3,10 @@ import Th from './MKI.png'
 const Sem2=[
 {
     '_id':2,
-    'name':"Entrepreneurship and Innovation” as Career Opportunity",
-    'description':'By: Dr Kavita Pandey ',
+    'name':"Achieving Problem- Solution Fit and Product-Market Fit",
+    'description':'By: Dr  Shrikant Mulik ',
     'image':Th,
-    'duration':'1 DAY-12:30pm-2:30pm',
+    'duration':'1 DAY-10:00am-12:00pm',
     'fee':0
    
 }
