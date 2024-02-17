@@ -94,6 +94,15 @@ function Home() {
         </Col>      );
     })}  
     </Row>
+    <Row >
+    {sem2s.map((sem2s)=> {
+      return (
+        <Col key={sem2s._id} sm={12} md={6} lg={4} xl={8}>
+          {/* <h2>{course.name}</h2> */}
+          <Seminar2 sem2s={sem2s}></Seminar2>
+        </Col>      );
+    })}  
+    </Row>
     </Row>
     
   <Footer/>
