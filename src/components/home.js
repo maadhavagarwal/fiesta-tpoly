@@ -103,7 +103,46 @@ function Home() {
         </Col>      );
     })}  
     </Row>
+    <Row >
+    {sem3s.map((sem3s)=> {
+      return (
+        <Col key={sem3s._id} sm={12} md={6} lg={4} xl={8}>
+          {/* <h2>{course.name}</h2> */}
+          <Seminar3 sem3s={sem3s}></Seminar3>
+        </Col>      );
+    })}
     </Row>
+        <Row >
+        {sems.map((sems)=> {
+          return (
+            <Col key={sems._id} sm={12} md={6} lg={4} xl={8}>
+              {/* <h2>{course.name}</h2> */}
+              <Seminar4 sems={sems}></Seminar4>
+            </Col>      );
+        })}  
+        </Row>
+        <Row >
+    {sem5s.map((sem5s)=> {
+      return (
+        <Col key={sem5s._id} sm={12} md={6} lg={4} xl={8}>
+          {/* <h2>{course.name}</h2> */}
+          <Seminar5 sem5s={sem5s}></Seminar5>
+        </Col>      );
+    })}
+    </Row>
+        <Row >
+        {sem6s.map((sem6s)=> {
+          return (
+            <Col key={sem6s._id} sm={12} md={6} lg={4} xl={8}>
+              {/* <h2>{course.name}</h2> */}
+              <Seminar6 sem6s={sem6s}></Seminar6>
+            </Col>      );
+        })}  
+        </Row>
+     
+    
+    </Row>
+  
     
   <Footer/>
    
