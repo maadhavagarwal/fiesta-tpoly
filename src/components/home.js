@@ -85,12 +85,12 @@ function Home() {
         </Col>      );
     })}  
     </Row>
-    <Row style={{margin:'0px'}}>
-    {sem1s.map((Sem1)=> {
+    <Row >
+    {sem1s.map((sems)=> {
       return (
-        <Col key={autionskill._id} sm={12} md={6} lg={4} xl={8}>
+        <Col key={sem1._id} sm={12} md={6} lg={4} xl={8}>
           {/* <h2>{course.name}</h2> */}
-          <Seminar Sem1={Sem1}></Seminar>
+          <Seminar sems={sems}></Seminar>
         </Col>      );
     })}  
     </Row>
