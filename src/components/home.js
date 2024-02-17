@@ -88,7 +88,7 @@ function Home() {
     <Row style={{margin:'0px'}}>
     {sem1s.map((Sem1)=> {
       return (
-        <Col key={autionskill._id} sm={12} md={6} lg={4} xl={8}>
+        <Col key={sem1s._id} sm={12} md={6} lg={4} xl={8}>
           {/* <h2>{course.name}</h2> */}
           <Seminar Sem1={Sem1}></Seminar>
         </Col>      );
