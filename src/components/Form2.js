@@ -7,6 +7,7 @@ import { Button, Form } from "react-bootstrap";
 function App() {
   const navigate = useNavigate();
   const [name, setName] = useState("");
+  const [msName,setmsName] = useState("");
   const [age, setAge] = useState("");
   const [email, setEmail] = useState("");
   const [password, setPassword] = useState("");
@@ -51,6 +52,9 @@ function App() {
   // enter by user in form
   const handleEmailChange = (e) => {
     setEmail(e.target.value);
+  };
+  const handlemsNameChange = (e) => {
+    setmsName(e.target.value);
   };
   // function to update state of password with
   // value enter by user in form
@@ -120,6 +124,7 @@ function App() {
             Email: { email },
             age: { age },
             Password: { password },
+            MsName:{msName},
             "Confrim Password": { confPassword },
             "College Name": { cName },
             Year: { year },
@@ -475,6 +480,17 @@ function App() {
                       handlecNameChange(e);
                     }}
                   />
+                    <label>Ms Name</label>
+                  <br />
+                  <input
+                    type="text"
+                    value={msName}
+                    required
+                    onChange={(e) => {
+                      handlemsNameChange(e);
+                    }}
+                  />
+                  <br />
                   <br />
                   <label>Year</label>
                   <br />
