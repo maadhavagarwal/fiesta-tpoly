@@ -17,49 +17,15 @@ const {id} =useParams()
     
   return (
   
-
-    <Container >
+<Container>
      <Link to='/events' className='btn btn-dark my-3'>Go Back</Link>
      <Row>
       <Col md={3}>
-        {/* <Image src={course.image}  height={200} width={200}/> */}
-    </Col>
-      <Col md={6}>
-      <Image src={sem2.image} height={200} width={200}/>
-      <ListGroup variant='flush'>
-       <ListGroup.Item>
-        <h3>{sem2.name}</h3>
-       </ListGroup.Item>
-       <ListGroup.Item>
-        <h3>Fee: {sem2.fee}</h3>
-       </ListGroup.Item>
-       <ListGroup.Item>
-        <h3>{sem2.description}</h3>
-       </ListGroup.Item>
-      </ListGroup>
+       <h1 style={{textalign:'center'}}>Entries full</h1>
+      
       </Col>
-     <Col md={3}>
-      <Card>
-        <ListGroup varient='flush'>
-          <ListGroup.Item>
-            <h6>Duration:{sem2.duration}</h6>
-
-          </ListGroup.Item>
-        </ListGroup>
-        
-          
-          <ListGroup.Item>
-          <Button  onClick={()=>{navigate("/fsem2")}}>Enroll Now</Button>
-         
-          </ListGroup.Item>
-      </Card>
-     </Col>
-
-
-     </Row>
-     
+      </Row>
      </Container>
-
 
   ) 
   } 
