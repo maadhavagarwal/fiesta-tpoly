@@ -38,15 +38,15 @@ function Home() {
     <h1 className='text-center m-3'>Event</h1>
     <hr></hr>
     <Row style={{display:'flex',flexWrap:'wrap',width:'100%',margin:'0'}} sm={12} md={6} lg={3} xl={8}>
-    <Row>
+    {/*<Row>
         {courses.map((course)=>(
         <Col key={course._id} sm={12} md={6} lg={4} xl={8}>
-          {/* <h2>{course.name}</h2> */}
+          {/* <h2>{course.name}</h2> 
           <HomeScreen course={course}></HomeScreen>
           
         </Col>      ))
         }
-    </Row>
+      </Row>*/}
     <Row>
     {sparks.map((sparks)=> {
       return (
@@ -85,11 +85,11 @@ function Home() {
         </Col>      );
     })}  
     </Row>
-    <Row >
+   {/*} <Row >
     {sem1s.map((sem1s)=> {
       return (
         <Col key={sem1s._id} sm={12} md={6} lg={4} xl={8}>
-          {/* <h2>{course.name}</h2> */}
+          {/* <h2>{course.name}</h2> 
           <Seminar sem1s={sem1s}></Seminar>
         </Col>      );
     })}  
@@ -98,11 +98,11 @@ function Home() {
     {sem2s.map((sem2s)=> {
       return (
         <Col key={sem2s._id} sm={12} md={6} lg={4} xl={8}>
-          {/* <h2>{course.name}</h2> */}
+          {/* <h2>{course.name}</h2> 
           <Seminar2 sem2s={sem2s}></Seminar2>
         </Col>      );
     })}  
-    </Row>
+    </Row>*/}
     <Row >
     {sem3s.map((sem3s)=> {
       return (
