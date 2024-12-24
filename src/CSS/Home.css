@@ -1,0 +1,32 @@
+/* Container for logo scrolling */
+.logo-scroll-container {
+    overflow: hidden;
+    width: 100%; /* Full width */
+    position: relative;
+    margin: 20px 0;
+  }
+  
+  /* Scrollable container for the logos */
+  .logo-scroll {
+    display: flex;
+    animation: scrollLogos 20s linear infinite; /* Adjust speed here */
+  }
+  
+  /* Style for individual logos */
+  .logo {
+    display: inline-block;
+    margin-right: 30px; /* Adjust spacing between logos */
+    height: 60px; /* Adjust according to logo size */
+    flex-shrink: 0; /* Prevent logos from shrinking */
+  }
+  
+  /* Infinite scroll animation */
+  @keyframes scrollLogos {
+    0% {
+      transform: translateX(0); /* Start at the first logo */
+    }
+    100% {
+      transform: translateX(-100%); /* Move by the full width of the logos */
+    }
+  }
+  
