@@ -50,6 +50,9 @@ import Home from './Components/Home';
 import "bootstrap/dist/css/bootstrap.min.css";
 import "bootstrap/dist/js/bootstrap.bundle.min.js";
 import Footer from './Components/Footer';
+<<<<<<< Updated upstream
+>>>>>>> Stashed changes
+=======
 >>>>>>> Stashed changes
 
 function App() {
@@ -100,6 +103,9 @@ function App() {
 =======
       <Toaster/>
       <Footer/>
+<<<<<<< Updated upstream
+>>>>>>> Stashed changes
+=======
 >>>>>>> Stashed changes
     </BrowserRouter>
    
