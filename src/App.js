@@ -4,6 +4,7 @@ import Header from './components/header';
 import Footer from './components/footer';
 import Home from './components/home';import {Container, Form} from 'react-bootstrap';
 import {BrowserRouter, Routes,Route} from 'react-router-dom';
+<<<<<<< Updated upstream
 import Login from './components/screen/login';
 import Signup from './components/screen/signup';
 import Course from './components/Course'
@@ -38,6 +39,18 @@ import Sem from './components/Sem';
 import Sem5 from './components/Sem5';
 import Sem6 from './components/Sem6';
 
+=======
+import Navbar from './Components/Navbar';
+import Events from './Components/Events';
+import EventDetails from './Components/EventDetails';
+import EnrollNow from './Components/EnrollNow';
+import { Toast } from 'react-bootstrap';
+import { Toaster } from 'react-hot-toast';
+import Home from './Components/Home';
+import "bootstrap/dist/css/bootstrap.min.css";
+import "bootstrap/dist/js/bootstrap.bundle.min.js";
+import Footer from './Components/Footer';
+>>>>>>> Stashed changes
 
 function App() {
   return (
@@ -80,9 +93,14 @@ function App() {
           
         </body>
       </>
+<<<<<<< Updated upstream
       </main>   
     
     
+=======
+      <Toaster/>
+      <Footer/>
+>>>>>>> Stashed changes
     </BrowserRouter>
    
     </>
